@@ -26,7 +26,6 @@ body{
 	<div style="background-image:url(pages/cooking-02.png);"></div>
 	<div style="background-image:url(pages/cooking-03.png);"></div>
 	<!-- add a conversation card somewhere here -->
-	</div>
 	<div style="background-image:url(pages/cooking-04.png);"></div>
 	<div style="background-image:url(pages/album-back.png);"></div>
 	<!-- last card should be end & take to home -->
@@ -36,6 +35,7 @@ body{
 	$(window).ready(function() {
 		$('#magazine').turn({
 			display: 'double',
+			autoCenter: true,
 			acceleration: true,
 			gradients: !$.isTouch,
 			elevation:50,

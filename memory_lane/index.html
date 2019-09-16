@@ -16,7 +16,7 @@
             <img class="suggestedSlides" src="./pages/cooking-04.png" width="500px">
             <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
             <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-            <button class="w3-display-middle w3-container w3-padding-16 w3-black">
+            <button class="w3-display-middle w3-container w3-padding-16 w3-black" onclick="toJourneys()">
                 <!-- add an onclick to take to journeys page - pass journeyid? -->
                 Suggested Journey Name - click to start
             </button>
@@ -33,6 +33,9 @@
                 } else {
                 header.classList.remove("sticky");
                 }
+            }
+            function toJourneys(){
+                window.open("./journey/journey.html")
             }
 
             var slideIndex = 1;
