@@ -2,7 +2,7 @@
 <html>
 <head>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="../../turn.min.js"></script>
+<script type="text/javascript" src="./turn.min.js"></script>
 <!-- Take CSS out, into it's own file. -->
 <style type="text/css">
 body{
@@ -24,18 +24,18 @@ body{
 	<div style="background-image:url(pages/album-cover.png);"></div>
 	<div style="background-image:url(pages/cooking-01.png);"></div>
 	<div style="background-image:url(pages/cooking-02.png);"></div>
-	<div style="background-image:url(pages/cooking-03.png);">
-		<!-- <button onclick='alert("Remember this?");'>Press Me</button>  -->
-		<!-- causes pages to go back because it clicks on the corner -->
-	</div>
+	<div style="background-image:url(pages/cooking-03.png);"></div>
+	<!-- add a conversation card somewhere here -->
 	<div style="background-image:url(pages/cooking-04.png);"></div>
 	<div style="background-image:url(pages/album-back.png);"></div>
+	<!-- last card should be end & take to home -->
 </div>
 
 <script type="text/javascript">
 	$(window).ready(function() {
 		$('#magazine').turn({
 			display: 'double',
+			autoCenter: true,
 			acceleration: true,
 			gradients: !$.isTouch,
 			elevation:50,
