@@ -6,6 +6,11 @@
     text-align: center;
   }
   
+  .navbar-nav {
+    color: #f1f1f1;
+    float: right;
+  }
+  
   /* Page content */
   .content {
     padding: 16px;

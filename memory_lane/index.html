@@ -1,15 +1,34 @@
 <!doctype html>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="index.css">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <!-- <script src="index.js"></script> -->
-    </head>
-    <body>
-        <div class="header" id="appNameHeader">
-            <h2>Memory Lane</h2>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- Header Navigation -->
+    <div class="header" id="appNameHeader">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <p class="navbar-brand">Memory Lane</p>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Your Journeys</a></li>
+                <li><a href="categories/categories.html">Your Categories</a></li>
+                <li><a href="#">Your Timeline</a></li>
+            </ul>
         </div>
+    </div>
+    <!--  Body - Journey Albums (Add multiple w. headings) -->
+    <h2>Your Journeys</h2>
+    <div class="w3-row">
+        <h3>Suggested Journeys</h3>
         <div class="w3-display-container content" width=700px>
+            <h3>Photos from August, 2019</h3>
             <img class="suggestedSlides" src="./pages/cooking-01.png" width="500px">
             <img class="suggestedSlides" src="./pages/cooking-02.png" width="500px">
             <img class="suggestedSlides" src="./pages/cooking-03.png" width="500px">
@@ -17,42 +36,49 @@
             <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
             <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
             <button class="w3-display-middle w3-container w3-padding-16 w3-black" onclick="toJourneys()">
-                <!-- add an onclick to take to journeys page - pass journeyid? -->
-                Suggested Journey Name - click to start
-            </button>
+                        <!-- add an onclick to take to journeys page - pass journeyid? -->
+                        Suggested Journey Name - click to start
+                    </button>
         </div>
-        <script>
-            window.onscroll = function() {myFunction()};
-            
-            var header = document.getElementById("appNameHeader");
-            var sticky = header.offsetTop;
-            
-            function myFunction() {
-                if (window.pageYOffset > sticky) {
-                header.classList.add("sticky");
-                } else {
-                header.classList.remove("sticky");
-                }
-            }
-            function toJourneys(){
-                window.open("./journey/journey.html")
-            }
+    </div>
 
-            var slideIndex = 1;
-            showDivs(slideIndex);
-            function plusDivs(n) {
-                showDivs(slideIndex += n);
+    <h3>Recent Journeys</h3>
+    <h3>Favourites</h3>
+
+    <!--  JS Functionality -->
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var header = document.getElementById("appNameHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
             }
-            function showDivs(n) {
-                var i;
-                var x = document.getElementsByClassName("suggestedSlides");
-                if (n > x.length) {slideIndex = 1}
-                if (n < 1) {slideIndex = x.length}
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";  
-                }
-                x[slideIndex-1].style.display = "block";  
+        }
+        function toJourneys() {
+            window.open("./journey/journey.html")
+        }
+
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("suggestedSlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
             }
-        </script>
-    </body>
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+
 </html>
