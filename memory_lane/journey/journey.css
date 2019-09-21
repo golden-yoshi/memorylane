@@ -32,13 +32,18 @@
     padding: 0 50px;
   }
 
+  .wrapper {
+    text-align: center;
+  }
+
   .btn {
-    vertical-align: middle;
+    position: absolute;
+    top: 50%;
   }
 
   #magazine {
     width: 800px; /*1152px*/
-    height: 600px; /*752px*/
+    height: 520px; /*752px*/
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -50,11 +55,119 @@
     background-size: 100% 100%;
   }
   
-  /* Popup container - can be anything you want */
+
+  /* Album Images */
+
+  .myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .myImg:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation */
+  .modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
+
+
+  /* Popup / Convo Prompt */
+
+  .popup-convo {
+    position: relative;
+    display: inline-block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+    top: 50%;
+  }
+
+  .popup-convo .popuptext {
+    width: 180px;
+    background-color: #999;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    margin-left: -240px;
+  }
+
   .popup {
     position: relative;
     display: inline-block;
-    /* cursor: pointer; */
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -65,7 +178,7 @@
   
   /* The actual popup */
   .popup .popuptext {
-    width: 160px;
+    width: 180px;
     background-color: #555;
     color: #fff;
     text-align: center;

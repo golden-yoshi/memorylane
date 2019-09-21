@@ -20,31 +20,110 @@
                 <li><a href="index.html">Your Journeys</a></li>
                 <li><a href="categories/categories.html">Your Categories</a></li>
                 <li><a href="#">Your Timeline</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">+</a></li>
             </ul>
         </div>
     </div>
     <!--  Body - Journey Albums (Add multiple w. headings) -->
-    <h2>Your Journeys</h2>
-    <div class="w3-row">
+    <div class="body-content">
+        <h2>Your Journeys</h2>
         <h3>Suggested Journeys</h3>
-        <div class="w3-display-container content" width=700px>
-            <h3>Photos from August, 2019</h3>
-            <img class="suggestedSlides" src="./pages/cooking-01.png" width="500px">
-            <img class="suggestedSlides" src="./pages/cooking-02.png" width="500px">
-            <img class="suggestedSlides" src="./pages/cooking-03.png" width="500px">
-            <img class="suggestedSlides" src="./pages/cooking-04.png" width="500px">
-            <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-            <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-            <button class="w3-display-middle w3-container w3-padding-16 w3-black" onclick="toJourneys()">
-                        <!-- add an onclick to take to journeys page - pass journeyid? -->
-                        Suggested Journey Name - click to start
-                    </button>
+        <div class="w3-row">
+            <!-- <div class="w3-display-container content" width=700px>
+                    <h3>Photos from August, 2019</h3>
+                    <img class="suggestedSlides" src="./pages/cooking-01.png" width="500px">
+                    <img class="suggestedSlides" src="./pages/cooking-02.png" width="500px">
+                    <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                    <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+                    <button class="w3-display-middle w3-container w3-padding-16 w3-black" onclick="toJourneys()">
+                                // add an onclick to take to journeys page - pass journeyid? 
+                                Suggested Journey Name - click to start
+                            </button>
+                </div> -->
+            <div class="responsive">
+                <div class="gallery">
+                    <div class="desc">Photos from August 2019 </div>
+                    <img src="pages/01.png" alt="Cinque Terre" width="600" height="400">
+                    <div class="desc"><button onclick="toJourneys()">Start Journey</button></div>
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="gallery">
+                    <div class="desc">Photos from August 2019 </div>
+                    <img src="pages/01.png" alt="Cinque Terre" width="600" height="400">
+                    <div class="desc"><button onclick="toJourneys()">Start Journey</button></div>
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="gallery">
+                    <div class="desc">Photos from August 2019 </div>
+                    <img src="pages/01.png" alt="Cinque Terre" width="600" height="400">
+                    <div class="desc"><button onclick="toJourneys()">Start Journey</button></div>
+                </div>
+            </div>
+
         </div>
+        <br>
+        <h3>Recent Journeys</h3>
+        <div class="w3-row">
+            <div class="responsive">
+                <div class="gallery">
+                    <div class="desc">Photos from August 2019 </div>
+                    <img src="pages/01.png" alt="Cinque Terre" width="600" height="400">
+                    <div class="desc"><button onclick="toJourneys()">View Journey</button></div>
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="gallery">
+                    <div class="desc">Photos from August 2019 </div>
+                    <img src="pages/01.png" alt="Cinque Terre" width="600" height="400">
+                    <div class="desc"><button onclick="toJourneys()">View Journey</button></div>
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="gallery">
+                    <div class="gallery">
+                        <div class="desc">Photos from August 2019 </div>
+                        <img src="pages/01.png" alt="Cinque Terre" width="600" height="400">
+                        <div class="desc"><button onclick="toJourneys()">View Journey</button></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="gallery">
+                    <div class="desc">Photos from August 2019 </div>
+                    <img src="pages/01.png" alt="Cinque Terre" width="600" height="400">
+                    <div class="desc"><button onclick="toJourneys()">View Journey</button></div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <h3>Favourites</h3>
+        <div class="w3-row">
+            <div class="responsive">
+                <div class="gallery">
+                    <div class="desc">Photos from August 2019 </div>
+                    <img src="pages/01.png" alt="Cinque Terre" width="600" height="400">
+                    <div class="desc"><button onclick="toJourneys()">View Journey</button></div>
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="gallery">
+                    <div class="desc">Photos from August 2019 </div>
+                    <img src="pages/01.png" alt="Cinque Terre" width="600" height="400">
+                    <div class="desc"><button onclick="toJourneys()">View Journey</button></div>
+                </div>
+            </div>
+        </div>
+
     </div>
-
-    <h3>Recent Journeys</h3>
-    <h3>Favourites</h3>
-
     <!--  JS Functionality -->
     <script>
         window.onscroll = function () { myFunction() };
@@ -68,6 +147,7 @@
         function plusDivs(n) {
             showDivs(slideIndex += n);
         }
+
         function showDivs(n) {
             var i;
             var x = document.getElementsByClassName("suggestedSlides");
