@@ -1,59 +1,187 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
 <head>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="./turn.min.js"></script>
-<!-- Take CSS out, into it's own file. -->
-<style type="text/css">
-body{
-	background:#ccc;
-}
-#magazine{
-	width:1152px;
-	height:752px;
-}
-#magazine .turn-page{
-	background-color:#ccc;
-	background-size:100% 100%;
-}
-</style>
+	<!-- Styling -->
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="journey.css" />
+	<!--Javascript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="./turn.min.js"></script>
 </head>
+
 <body>
+	<!-- Header Navigation -->
+	<div class="header" id="appNameHeader">
+		<div class="container-fluid">
+			<div class="navbar-header">
+                <p class="navbar-brand"><i class="fas fa-map-signs"></i>Memory Lane</p>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="./../../index.html">Phone Lane</a></li>
+                <li><a href="./../../categories/categories.html"><i class=fa-picture-o></i>Photos</a></li>
+                <li><a href="./../../settings.html">Settings</a></li>
+                <li><a href="#">+</a></li>
+            </ul>
+		</div>
+	</div>
+	<!-- Header Journey Album -->
+	<div>
+		<div class="album-header" class="navbar-header">
+			<ul>
+				<!-- Need variable for Journey Name -->
+				<li>August 30, 2019 at Surry Hills</li>
+				<!-- Need variables for current page # and total pages -->
+				<li><span id="pageNum">1</span> of 4 pages </li>
+				<!-- Add current album to favourites list -->
+				<li><button id="favourite" onclick="addFav()"><i class="fa fa-star-o"></i> Add to Favourites</button></li>
+			</ul>
+		</div>
+	</div>
 
-<div id="magazine">
-	<div style="background-image:url(pages/album-cover.png);"></div>
-	<div style="background-image:url(pages/cooking-01.png);"></div>
-	<div style="background-image:url(pages/cooking-02.png);"></div>
-	<div style="background-image:url(pages/cooking-03.png);"></div>
-	<!-- add a conversation card somewhere here -->
-	<div style="background-image:url(pages/cooking-04.png);"></div>
-	<div style="background-image:url(pages/album-back.png);"></div>
-	<!-- last card should be end & take to home -->
-</div>
+	<!-- style to be more aesthetic-->
+	<div class="w3-row">
+		<div class="w3-col wrapper" style="width:10%">
+			<button class="w3-circle btn" onclick="previousPage()"><</button>
+		</div>
+		<div class="w3-col" style="width:80%">
+			<div id="magazine">
+				<div style="background-image:url(pages/album-cover.png);"></div>
+				<div style="background-image:url(pages/blank.png);">
+					<!-- Top Image -->
+					<img id="myImg" src="pages/01.png" alt="Snow" style="padding-top:50px;max-width:300px">
+					<!-- Bottom Image -->
+					<img id="myImg" src="pages/01.png" alt="Snow" style="padding-top:50px;max-width:300px">
+				</div>
+				<div style="background-image:url(pages/blank.png);">
+					<!-- Top Image -->
+					<img id="myImg" src="pages/01.png" alt="Snow" style="padding-top:50px;max-width:300px">
+					<!-- Bottom Image -->
+					<img id="myImg" src="pages/01.png" alt="Snow" style="padding-top:50px;max-width:300px">
+				</div>
+				<div style="background-image:url(pages/cooking-03.png);">
+					<div class="popup">
+						<span class="popuptext" id="myPopup">Remember this moment?</span>
+					</div>
+				</div>
+				<div style="background-image:url(pages/blank.png);">
+					<!-- Top Image -->
+					<img class="myImg" src="pages/01.png" alt="Snow" style="padding-top:50px;max-width:300px">
+					<!-- Bottom Image -->
+					<img class="myImg" src="pages/01.png" alt="Snow" style="padding-top:50px;max-width:300px">
+				</div>
+				<div style="background-image:url(pages/blank.png);">
+					<!-- Top Image -->
+					<img id="myImg" src="pages/01.png" alt="Snow" style="padding-top:50px;max-width:300px">
+					<!-- Bottom Image -->
+					<img id="myImg" src="pages/01.png" alt="Snow" style="padding-top:50px;max-width:300px">
+				</div>
+				<div style="background-image:url(pages/blank.png);">
+					<!-- Top Image -->
+					<img id="myImg" src="pages/01.png" alt="Snow" style="padding-top:50px;max-width:300px">
+					<div class="popup-convo">
+						<span class="popuptext" id="myPopup">Remember this moment?</span>
+					</div>
+				</div>
+				<div style="background-image:url(pages/album-back.png);">
+					<!-- last card should be end & take to home -->
+				</div>
+				<div style="background-image:url(pages/white.png);" class="popup">
+					<button class="w3-display-middle w3-container w3-padding-16 w3-black" onclick="location.href='./../index.html'">
+						Back to Journeys
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="w3-col wrapper" style="width:10%">
+			<button class="w3-circle btn" onclick="nextPage()">></button>
+		</div>
+	</div>
+	<!-- The Modal -->
+	<div class="myModal modal">
+		<span class="close">&times;</span>
+		<img class="modal-content" id="img01">
+		<div id="caption"></div>
+	</div>
 
-<script type="text/javascript">
-	$(window).ready(function() {
-		$('#magazine').turn({
-			display: 'double',
-			autoCenter: true,
-			acceleration: true,
-			gradients: !$.isTouch,
-			elevation:50,
-			when: {
-				turned: function(e, page) {
-					/*console.log('Current view: ', $(this).turn('view'));*/
+	<!--  JS Functionality -->
+	<script type="text/javascript">
+		$(window).ready(function () {
+			$("#magazine").turn({
+				display: "double",
+				autoCenter: true,
+				acceleration: true,
+				gradients: !$.isTouch,
+				elevation: 50,
+				when: {
+					turned: function (e, page) {
+						/*console.log('Current view: ', $(this).turn('view'));*/
+					}
 				}
-			}
+			});
 		});
-	});
-	
-	$(window).bind('keydown', function(e){
-		if (e.keyCode==37)
-			$('#magazine').turn('previous');
-		else if (e.keyCode==39)
-			$('#magazine').turn('next');
-	});
 
-</script>
+		function previousPage() {
+			var elem = document.getElementById("pageNum").innerHTML;
+			$("#magazine").turn("previous");
+			if(elem != '1'){
+				--elem;
+			}
+		}
+
+		function nextPage() {
+			var elem = document.getElementById("pageNum").innerHTML;
+			$("#magazine").turn("next");
+			if(elem != '4'){
+				++elem;
+			}
+		}
+
+		$(window).bind("keydown", function (e) {
+			if (e.keyCode == 37) $("#magazine").turn("previous");
+			else if (e.keyCode == 39) $("#magazine").turn("next");
+		});
+
+		// Click to hide and show
+		function convoCard() {
+			var popup = document.getElementById("myPopup");
+			popup.classList.toggle("show");
+			// popup.style.visibility = "hidden";
+		}
+
+		function addFav() {
+			var elem = document.getElementById("favourite");
+			if (elem.innerHTML == '<i class="fa fa-star-o"></i>' + " Add to Favourites") elem.innerHTML = '<i class="fa fa-star"></i>' + " Remove from Favourites";
+			else elem.innerHTML = '<i class="fa fa-star-o"></i>' + " Add to Favourites";
+		}
+
+		// Get the modal
+		var modal = document.getElementById("myModal");
+
+		// Get the image and insert it inside the modal - use its "alt" text as a caption
+		var img = document.getElementsByClassName("myImg");
+		var modalImg = document.getElementById("img01");
+		var captionText = document.getElementById("caption");
+
+		img.onclick = function () {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function () {
+			modal.style.display = "none";
+		}
+	</script>
 </body>
+
 </html>
