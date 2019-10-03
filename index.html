@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -14,28 +15,27 @@
     <div class="header" id="appNameHeader">
         <div class="container-fluid">
             <div class="navbar-header">
-                <p class="navbar-brand">Memory Lane</p>
+                <p class="navbar-brand"><i class="fas fa-map-signs"></i>Memory Lane</p>
             </div>
             <ul class="nav navbar-nav">
-                <li><a href="index.html">Your Journeys</a></li>
-                <li><a href="categories/categories.html">Your Categories</a></li>
-                <li><a href="#">Your Timeline</a></li>
-                <li><a href="#">Settings</a></li>
+                <li><a href="index.html">Phone Lane</a></li>
+                <li><a href="categories/categories.html"><i class=fa-picture-o></i>Photos</a></li>
+                <li><a href="settings.html">Settings</a></li>
                 <li><a href="#">+</a></li>
             </ul>
         </div>
     </div>
     <!--  Body - Journey Albums (Add multiple w. headings) -->
     <div class="body-content">
-        <h2>Your Journeys</h2>
+        <h2>Photo Lane</h2>
         <!-- TODO: check this out for each section: https://www.w3schools.com/bootstrap/bootstrap_carousel.asp -->
-        <h3>Suggested Journeys</h3>
+        <h3>Suggested Photo Lanes</h3>
         <div class="w3-row">
             <div class="responsive">
                 <div class="gallery">
                     <div class="desc">Photos from August 2019 </div>
                     <img src="pages/01.png" alt="Cinque Terre" width="600" height="400">
-                    <div class="desc"><button onclick="toJourneys()">Start Journey</button></div>
+                    <div class="desc"><button class="button" class="button" onclick="toJourneys()">Start</button></div>
                 </div>
             </div>
 
@@ -43,7 +43,7 @@
                 <div class="gallery">
                     <div class="desc">Photos from August 2019 </div>
                     <img src="pages/01.png" alt="Cinque Terre" width="600" height="400">
-                    <div class="desc"><button onclick="toJourneys()">Start Journey</button></div>
+                    <div class="desc"><button class="button" onclick="toJourneys()">Start</button></div>
                 </div>
             </div>
 
@@ -51,7 +51,7 @@
                 <div class="gallery">
                     <div class="desc">Photos from August 2019 </div>
                     <img src="pages/01.png" alt="Cinque Terre" width="600" height="400">
-                    <div class="desc"><button onclick="toJourneys()">Start Journey</button></div>
+                    <div class="desc"><button class="button" onclick="toJourneys()">Start</button></div>
                 </div>
             </div>
 
@@ -63,7 +63,7 @@
                 <div class="gallery">
                     <div class="desc">Photos from August 2019 </div>
                     <img src="pages/01.png" alt="Cinque Terre" width="600" height="400">
-                    <div class="desc"><button onclick="toJourneys()">View Journey</button></div>
+                    <div class="desc"><button class="button" onclick="toJourneys()">View</button></div>
                 </div>
             </div>
 
@@ -71,17 +71,7 @@
                 <div class="gallery">
                     <div class="desc">Photos from August 2019 </div>
                     <img src="pages/01.png" alt="Cinque Terre" width="600" height="400">
-                    <div class="desc"><button onclick="toJourneys()">View Journey</button></div>
-                </div>
-            </div>
-
-            <div class="responsive">
-                <div class="gallery">
-                    <div class="gallery">
-                        <div class="desc">Photos from August 2019 </div>
-                        <img src="pages/01.png" alt="Cinque Terre" width="600" height="400">
-                        <div class="desc"><button onclick="toJourneys()">View Journey</button></div>
-                    </div>
+                    <div class="desc"><button class="button" onclick="toJourneys()">View</button></div>
                 </div>
             </div>
 
@@ -89,7 +79,15 @@
                 <div class="gallery">
                     <div class="desc">Photos from August 2019 </div>
                     <img src="pages/01.png" alt="Cinque Terre" width="600" height="400">
-                    <div class="desc"><button onclick="toJourneys()">View Journey</button></div>
+                    <div class="desc"><button class="button" onclick="toJourneys()">View</button></div>
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="gallery">
+                    <div class="desc">Photos from August 2019 </div>
+                    <img src="pages/01.png" alt="Cinque Terre" width="600" height="400">
+                    <div class="desc"><button class="button" onclick="toJourneys()">View</button></div>
                 </div>
             </div>
         </div>
@@ -100,7 +98,7 @@
                 <div class="gallery">
                     <div class="desc">Photos from August 2019 </div>
                     <img src="pages/01.png" alt="Cinque Terre" width="600" height="400">
-                    <div class="desc"><button onclick="toJourneys()">View Journey</button></div>
+                    <div class="desc"><button class="button" onclick="toJourneys()">View</button></div>
                 </div>
             </div>
 
@@ -108,7 +106,7 @@
                 <div class="gallery">
                     <div class="desc">Photos from August 2019 </div>
                     <img src="pages/01.png" alt="Cinque Terre" width="600" height="400">
-                    <div class="desc"><button onclick="toJourneys()">View Journey</button></div>
+                    <div class="desc"><button class="button" onclick="toJourneys()">View</button></div>
                 </div>
             </div>
         </div>
