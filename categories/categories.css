@@ -1,4 +1,25 @@
 /* Style the header */
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+body {
+  font-family: Nunito;
+}
+
+h2, h3, strong, p {
+  font-family: Nunito;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+h3 {
+  color: #14A085;
+}
+
+li {
+  font-weight: bold;
+  color: #14A085;
+  font-size: 18px;
+}
 
 .body-content {
   padding: 10px;
@@ -17,7 +38,7 @@
   }
 
   .button {
-    background-color: #4CAF50; /* Green */
+    background-color: #14A085; /* Green */
     border: none;
     border-radius: 4px;
     color: white;
@@ -30,7 +51,7 @@
   }
 
   .button:hover {
-    background-color: #3C943F;
+    background-color: #1bab82;
   }
 
   h2, h3, strong, p {

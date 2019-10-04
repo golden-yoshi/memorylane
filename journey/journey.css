@@ -1,4 +1,22 @@
-  /* Style the header */
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+body {
+  font-family: Nunito;
+}
+
+p {
+  font-family: Nunito;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.nav li {
+  font-weight: bold;
+  color: #14A085;
+  font-size: 18px;
+}
+
+/* Style the header */
 .header {
     padding: 10px 16px;
     background: #fff;
@@ -36,7 +54,6 @@
   .album-header ul {
     list-style: none;
     text-decoration: none;
-    overflow: hidden;
     min-width: 696px;
 	  list-style: none;
 	  padding-top: 20px
@@ -70,17 +87,6 @@
     background-color: #ccc;
     background-size: 100% 100%;
   }
-  
-
-  /* Album Images */
-
-  .myImg {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .myImg:hover {opacity: 0.7;}
   
   /* The Modal (background) */
   .modal {
@@ -170,11 +176,11 @@
 
   .popup-convo .popuptext {
     width: 180px;
-    background-color: #999;
+    background-color: #14A085;
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 8px 0;
+    padding: 12px;
     position: absolute;
     z-index: 1;
     bottom: 125%;

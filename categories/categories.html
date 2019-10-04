@@ -16,13 +16,11 @@
     <div class="header" id="appNameHeader">
         <div class="container-fluid">
             <div class="navbar-header">
-                <p class="navbar-brand"><a href="index.html"><img src="../assets/Logo.png" alt="MemoryLane"></a></p>
+                <p class="navbar-brand" style="position:absolute;top:50;left:45%;float:left;"><a href="../index.html"><img src="../Assets/Logo.png" alt="MemoryLane"></a></p>
             </div>
             <ul class="nav navbar-nav">
-                <li><a href="../index.html">Photo Lanes</a></li>
-                <li><a href="categories/categories.html"><img src="../assets/Photos.png"> Photos</a></li>
-                <li><a href="../settings.html">Settings</a></li>
-                <li><a href="#">+</a></li>
+                <li><a href="#"><img src="../Assets/Photos.png"> CATEGORIES</a></li>
+                <li><a href="#"><img src="../Assets/Add.png"> UPLOAD PHOTOS</a></li>
             </ul>
         </div>
     </div>
@@ -34,28 +32,28 @@
                 <div class="gallery">
                     <div class="desc">By Time</div>
                     <img src="../pages/01.png" alt="Cinque Terre" width="600" height="400">
-                    <div class="desc"><button class="button" onclick="window.open('time.html')">View</button></div>
+                    <div class="desc"><button class="button" onclick="window.open('time.html', '_self')">View</button></div>
                 </div>
                 </div>
                 <div class="responsive">
                     <div class="gallery">
                         <div class="desc">By Place</div>
                         <img src="../pages/01.png" alt="Cinque Terre" width="600" height="400">
-                        <div class="desc"><button class="button" onclick="window.open('place.html')">View</button></div>
+                        <div class="desc"><button class="button" onclick="window.open('place.html', '_self')">View</button></div>
                     </div>
                 </div>
                 <div class="responsive">
                     <div class="gallery">
                         <div class="desc">By People</div>
                         <img src="../pages/01.png" alt="Cinque Terre" width="600" height="400">
-                        <div class="desc"><button class="button" onclick="window.open('people.html')">View</button></div>
+                        <div class="desc"><button class="button" onclick="window.open('people.html', '_self')">View</button></div>
                     </div>
                 </div>
                 <div class="responsive">
                     <div class="gallery">
                         <div class="desc">By Event</div>
                         <img src="../pages/01.png" alt="Cinque Terre" width="600" height="400">
-                        <div class="desc"><button class="button" onclick="window.open('events.html')">View</button></div>
+                        <div class="desc"><button class="button" onclick="window.open('events.html', '_self')">View</button></div>
                     </div>
                 </div>
             </div>
@@ -99,7 +97,7 @@
         }
 
         function toJourneys() {
-            window.open("../journey/journey.html");
+            window.open("../journey/journey.html", "_self");
         }
 
         // var slideIndex = 1;

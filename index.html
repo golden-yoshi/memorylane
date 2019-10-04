@@ -16,42 +16,39 @@
     <div class="header" id="appNameHeader">
         <div class="container-fluid">
             <div class="navbar-header">
-                <p class="navbar-brand"><a href="index.html"><img src="Assets/Logo.png" alt="MemoryLane"></a></p>
+                <p class="navbar-brand" style="position:absolute;top:50;left:45%;float:left;"><a href="index.html"><img src="Assets/Logo.png" alt="MemoryLane"></a></p>
             </div>
             <ul class="nav navbar-nav">
-                <li><a href="index.html">Photo Lanes</a></li>
-                <li><a href="categories/categories.html"><img src="Assets/Photos.png"> Photos</a></li>
-                <li><a href="settings.html">Settings</a></li>
-                <li><a href="#">+</a></li>
+                <li><a href="categories/categories.html"><img src="Assets/Photos.png"> CATEGORIES</a></li>
+                <li><a href="#"><img src="assets/Add.png" alt="+"> UPLOAD PHOTOS</a></li>
             </ul>
         </div>
     </div>
     <!--  Body - Journey Albums (Add multiple w. headings) -->
     <div class="body-content">
         <h2>Photo Lane</h2>
-        <!-- TODO: check this out for each section: https://www.w3schools.com/bootstrap/bootstrap_carousel.asp -->
         <h3>Suggested Photo Lanes</h3>
         <div class="w3-row">
             <div class="responsive">
                 <div class="gallery">
-                    <div class="desc">Photos from August 2019 </div>
-                    <img src="pages/01.png" alt="Cinque Terre" width="600" height="400">
+                    <div class="desc" style="font-weight:bold">August 2019 </div>
+                    <img src="pages/baking.png" alt="Cinque Terre" width="600" height="400">
                     <div class="desc"><button class="button" class="button" onclick="toJourneys()">Start</button></div>
                 </div>
             </div>
 
             <div class="responsive">
                 <div class="gallery">
-                    <div class="desc">Photos from August 2019 </div>
-                    <img src="pages/01.png" alt="Cinque Terre" width="600" height="400">
+                    <div class="desc" style="font-weight:bold">Family Farm Vacation </div>
+                    <img src="pages/hay.png" alt="Cinque Terre" width="600" height="400">
                     <div class="desc"><button class="button" onclick="toJourneys()">Start</button></div>
                 </div>
             </div>
 
             <div class="responsive">
                 <div class="gallery">
-                    <div class="desc">Photos from August 2019 </div>
-                    <img src="pages/01.png" alt="Cinque Terre" width="600" height="400">
+                    <div class="desc" style="font-weight:bold">Lily's New Dog </div>
+                    <img src="pages/dog.png" alt="Cinque Terre" width="600" height="400">
                     <div class="desc"><button class="button" onclick="toJourneys()">Start</button></div>
                 </div>
             </div>
@@ -62,32 +59,32 @@
         <div class="w3-row">
             <div class="responsive">
                 <div class="gallery">
-                    <div class="desc">Photos from August 2019 </div>
-                    <img src="pages/01.png" alt="Cinque Terre" width="600" height="400">
+                    <div class="desc" style="font-weight:bold">Snow Trip </div>
+                    <img src="pages/snow.png" alt="Cinque Terre" width="600" height="400">
                     <div class="desc"><button class="button" onclick="toJourneys()">View</button></div>
                 </div>
             </div>
 
             <div class="responsive">
                 <div class="gallery">
-                    <div class="desc">Photos from August 2019 </div>
-                    <img src="pages/01.png" alt="Cinque Terre" width="600" height="400">
+                    <div class="desc" style="font-weight:bold">Sunny Resort</div>
+                    <img src="pages/swimming.png" alt="Cinque Terre" width="600" height="400">
                     <div class="desc"><button class="button" onclick="toJourneys()">View</button></div>
                 </div>
             </div>
 
             <div class="responsive">
                 <div class="gallery">
-                    <div class="desc">Photos from August 2019 </div>
-                    <img src="pages/01.png" alt="Cinque Terre" width="600" height="400">
+                    <div class="desc" style="font-weight:bold">Lily's Birth</div>
+                    <img src="pages/birth.png" alt="Cinque Terre" width="600" height="400">
                     <div class="desc"><button class="button" onclick="toJourneys()">View</button></div>
                 </div>
             </div>
 
             <div class="responsive">
                 <div class="gallery">
-                    <div class="desc">Photos from August 2019 </div>
-                    <img src="pages/01.png" alt="Cinque Terre" width="600" height="400">
+                    <div class="desc" style="font-weight:bold">Christmas 2018</div>
+                    <img src="pages/christmas.png" alt="Cinque Terre" width="600" height="400">
                     <div class="desc"><button class="button" onclick="toJourneys()">View</button></div>
                 </div>
             </div>
@@ -115,7 +112,7 @@
         <!-- Action buttons -->
         <a href="settings.html"><img src="assets/Settings.png" alt="?"id="gear"></a>
         <a href="settings.html"><img src="assets/Help_Support.png" alt="i"id="info"></a>
-        
+
     </div>
     <!--  JS Functionality -->
     <script>
@@ -133,7 +130,7 @@
         }
 
         function toJourneys() {
-            window.open("./journey/journey.html")
+            window.open("./journey/journey.html", "_self")
         }
         var slideIndex = 1;
         showDivs(slideIndex);

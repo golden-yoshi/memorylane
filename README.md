@@ -1,6 +1,8 @@
 # memorylane
 AiD Project
 
+Photos: https://www.shutterstock.com/g/tan4ikk?page=23&section=1&search_source=base_gallery&language=en
+
 Resources:
 http://www.turnjs.com/
 https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_navbar&stacked=h

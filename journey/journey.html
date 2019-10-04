@@ -18,25 +18,24 @@
 
 <body>
 	<!-- Header Navigation -->
+	<!-- Header Navigation -->
 	<div class="header" id="appNameHeader">
 		<div class="container-fluid">
 			<div class="navbar-header">
-                <p class="navbar-brand"><a href="index.html"><img src="../assets/Logo.png" alt="MemoryLane"></a></p>
-            </div>
-            <ul class="nav navbar-nav">
-                <li><a href="../index.html">Photo Lanes</a></li>
-                <li><a href="categories/categories.html"><img src="../assets/Photos.png"> Photos</a></li>
-                <li><a href="../settings.html">Settings</a></li>
-                <li><a href="#">+</a></li>
-            </ul>
+				<p class="navbar-brand" style="position:absolute;top:50;left:45%;float:left;"><a href="../index.html"><img src="../Assets/Logo.png" alt="MemoryLane"></a></p>
+			</div>
+			<ul class="nav navbar-nav">
+				<li><a href="categories/categories.html"><img src="../Assets/Photos.png"> CATEGORIES</a></li>
+				<li><a href="#"><img src="../assets/Add.png" alt=""> UPLOAD PHOTOS</a></li>
+			</ul>
 		</div>
 	</div>
 	<!-- Header Journey Album -->
 	<div>
-		<div class="album-header" class="navbar-header">
+		<div class="album-header">
 			<ul>
 				<!-- Need variable for Journey Name -->
-				<li>August 30, 2019 at Surry Hills</li>
+				<li>August 2019 at Lane Cove</li>
 				<!-- Need variables for current page # and total pages -->
 				<li><span id="pageNum">1</span> of 4 pages </li>
 				<!-- Add current album to favourites list -->
@@ -90,7 +89,7 @@
 					<img id="myImg" src="pages/05.png" alt="Snow" style="padding-top:50px;max-width:300px">
 					<!-- Convo -->
 					<div class="popup-convo">
-						<span class="popuptext" id="myPopup">What were you all baking?</span>
+						<span class="popuptext" id="myPopup">What were you all baking that day?</span>
 					</div>
 				</div>
 				<div style="background-image:url(pages/album-back.png);">
@@ -134,7 +133,7 @@
 		function previousPage() {
 			var elem = document.getElementById("pageNum").innerHTML;
 			$("#magazine").turn("previous");
-			if(elem != '1'){
+			if (elem != '1') {
 				--elem;
 			}
 		}
@@ -142,7 +141,7 @@
 		function nextPage() {
 			var elem = document.getElementById("pageNum").innerHTML;
 			$("#magazine").turn("next");
-			if(elem != '4'){
+			if (elem != '4') {
 				++elem;
 			}
 		}
