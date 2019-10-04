@@ -166,3 +166,17 @@
   .slider.round:before {
     border-radius: 50%;
   }
+
+  /*Splash screen*/
+
+  #splash {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /*Welcome Screen*/
+  .carouselImg {
+    width: 50%;
+  }
