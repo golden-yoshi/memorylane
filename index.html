@@ -16,11 +16,11 @@
     <div class="header" id="appNameHeader">
         <div class="container-fluid">
             <div class="navbar-header">
-                <p class="navbar-brand"><i class="fas fa-map-signs"></i>Memory Lane</p>
+                <p class="navbar-brand"><a href="index.html"><img src="Assets/Logo.png" alt="MemoryLane"></a></p>
             </div>
             <ul class="nav navbar-nav">
                 <li><a href="index.html">Photo Lanes</a></li>
-                <li><a href="categories/categories.html"><i class=fa-picture-o></i>Photos</a></li>
+                <li><a href="categories/categories.html"><img src="Assets/Photos.png"> Photos</a></li>
                 <li><a href="settings.html">Settings</a></li>
                 <li><a href="#">+</a></li>
             </ul>
@@ -93,7 +93,7 @@
             </div>
         </div>
         <br>
-        <h3>Favourites</h3>
+        <!-- <h3>Favourites</h3>
         <div class="w3-row">
             <div class="responsive">
                 <div class="gallery">
@@ -110,8 +110,12 @@
                     <div class="desc"><button class="button" onclick="toJourneys()">View</button></div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
+        <!-- Action buttons -->
+        <a href="settings.html"><img src="assets/Settings.png" alt="?"id="gear"></a>
+        <a href="settings.html"><img src="assets/Help_Support.png" alt="i"id="info"></a>
+        
     </div>
     <!--  JS Functionality -->
     <script>
@@ -127,10 +131,10 @@
                 header.classList.remove("sticky");
             }
         }
+
         function toJourneys() {
             window.open("./journey/journey.html")
         }
-
         var slideIndex = 1;
         showDivs(slideIndex);
         function plusDivs(n) {

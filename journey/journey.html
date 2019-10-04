@@ -21,11 +21,11 @@
 	<div class="header" id="appNameHeader">
 		<div class="container-fluid">
 			<div class="navbar-header">
-                <p class="navbar-brand"><i class="fas fa-map-signs"></i>Memory Lane</p>
+                <p class="navbar-brand"><a href="index.html"><img src="../assets/Logo.png" alt="MemoryLane"></a></p>
             </div>
             <ul class="nav navbar-nav">
                 <li><a href="../index.html">Photo Lanes</a></li>
-                <li><a href="./categories/categories.html"><i class=fa-picture-o></i>Photos</a></li>
+                <li><a href="categories/categories.html"><img src="../assets/Photos.png"> Photos</a></li>
                 <li><a href="../settings.html">Settings</a></li>
                 <li><a href="#">+</a></li>
             </ul>
@@ -48,7 +48,7 @@
 	<!-- style to be more aesthetic-->
 	<div class="w3-row">
 		<div class="w3-col wrapper" style="width:10%">
-			<button class="w3-circle btn" onclick="previousPage()"></button>
+			<img src="../assets/ActiveLeft.png" class="btn" onclick="previousPage()">
 		</div>
 		<div class="w3-col" style="width:80%">
 			<div id="magazine">
@@ -57,36 +57,40 @@
 					<!-- Top Image -->
 					<img id="myImg" src="pages/01.png" alt="Snow" style="padding-top:50px;max-width:300px">
 					<!-- Bottom Image -->
-					<img id="myImg" src="pages/01.png" alt="Snow" style="padding-top:50px;max-width:300px">
+					<img id="myImg" src="pages/02.png" alt="Snow" style="padding-top:50px;max-width:300px">
 				</div>
 				<div style="background-image:url(pages/blank.png);">
 					<!-- Top Image -->
-					<img id="myImg" src="pages/01.png" alt="Snow" style="padding-top:50px;max-width:300px">
+					<img id="myImg" src="pages/03.png" alt="Snow" style="padding-top:50px;max-width:300px">
 					<!-- Bottom Image -->
-					<img id="myImg" src="pages/01.png" alt="Snow" style="padding-top:50px;max-width:300px">
+					<img id="myImg" src="pages/04.png" alt="Snow" style="padding-top:50px;max-width:300px">
 				</div>
-				<div style="background-image:url(pages/cooking-03.png);">
-					<div class="popup">
-						<span class="popuptext" id="myPopup">Remember this moment?</span>
+				<div style="background-image:url(pages/blank.png);">
+					<!-- Convo -->
+					<div class="popup-convo" style="padding-top:220px;padding-left:300px">
+						<span class="popuptext" id="myPopup">Who were you with that day?</span>
 					</div>
+					<!-- Bottom Image -->
+					<img id="myImg" src="pages/05.png" alt="Snow" style="padding-top:50px;max-width:300px">
+				</div>
+				<div style="background-image:url(pages/blank.png);">
+					<!-- Top Image -->
+					<img id="myImg" src="pages/06.png" alt="Snow" style="padding-top:50px;max-width:300px">
+					<!-- Bottom Image -->
+					<img id="myImg" src="pages/07.png" alt="Snow" style="padding-top:50px;max-width:300px">
 				</div>
 				<div style="background-image:url(pages/blank.png);">
 					<!-- Top Image -->
 					<img class="myImg" src="pages/01.png" alt="Snow" style="padding-top:50px;max-width:300px">
 					<!-- Bottom Image -->
-					<img class="myImg" src="pages/01.png" alt="Snow" style="padding-top:50px;max-width:300px">
+					<img class="myImg" src="pages/03.png" alt="Snow" style="padding-top:50px;max-width:300px">
 				</div>
 				<div style="background-image:url(pages/blank.png);">
 					<!-- Top Image -->
-					<img id="myImg" src="pages/01.png" alt="Snow" style="padding-top:50px;max-width:300px">
-					<!-- Bottom Image -->
-					<img id="myImg" src="pages/01.png" alt="Snow" style="padding-top:50px;max-width:300px">
-				</div>
-				<div style="background-image:url(pages/blank.png);">
-					<!-- Top Image -->
-					<img id="myImg" src="pages/01.png" alt="Snow" style="padding-top:50px;max-width:300px">
+					<img id="myImg" src="pages/05.png" alt="Snow" style="padding-top:50px;max-width:300px">
+					<!-- Convo -->
 					<div class="popup-convo">
-						<span class="popuptext" id="myPopup">Remember this moment?</span>
+						<span class="popuptext" id="myPopup">What were you all baking?</span>
 					</div>
 				</div>
 				<div style="background-image:url(pages/album-back.png);">
@@ -100,7 +104,7 @@
 			</div>
 		</div>
 		<div class="w3-col wrapper" style="width:10%">
-			<button class="w3-circle btn" onclick="nextPage()">></button>
+			<img src="../assets/ActiveRight.png" class="btn" onclick="nextPage()">
 		</div>
 	</div>
 	<!-- The Modal -->

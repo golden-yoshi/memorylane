@@ -166,3 +166,28 @@
   .slider.round:before {
     border-radius: 50%;
   }
+
+  /* To Settings*/
+  #gear {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+  }
+
+  #info {
+    position: fixed;
+    bottom: 20px;
+    right: 90px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+  }
