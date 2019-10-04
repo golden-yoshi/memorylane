@@ -2,11 +2,13 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" type="text/css" href="categories.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="categories.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <title>Memory Lane</title>
 </head>
 
 <body>
@@ -14,111 +16,106 @@
     <div class="header" id="appNameHeader">
         <div class="container-fluid">
             <div class="navbar-header">
-                <p class="navbar-brand"><i class="fas fa-map-signs"></i>Memory Lane</p>
+                <p class="navbar-brand" style="position:absolute;top:50;left:45%;float:left;"><a href="../index.html"><img src="../Assets/Logo.png" alt="MemoryLane"></a></p>
             </div>
             <ul class="nav navbar-nav">
-                <li><a href="./../../index.html">Phone Lane</a></li>
-                <li><a href="categories/categories.html"><i class=fa-picture-o></i>Photos</a></li>
-                <li><a href="./../../settings.html">Settings</a></li>
-                <li><a href="#">+</a></li>
+                <li><a href="#"><img src="../Assets/Photos.png"> CATEGORIES</a></li>
+                <li><a href="#"><img src="../Assets/Add.png"> UPLOAD PHOTOS</a></li>
             </ul>
         </div>
     </div>
-    <!--  Body - Journey Albums (Add multiple w. headings) -->
+    <!--  Body - Journey Albums  -->
     <div class="body-content">
         <h2>Categories</h2>
         <div class="row">
-            <div class="col-sm-5">
-                <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="../pages/01.PNG" alt="Card image cap">
-                        <div class="card-body" style="padding: 10px;">
-                            <a href="../journey/journey.html" class="btn btn-primary">TIME</a>
-                        </div>
+            <div class="responsive">
+                <div class="gallery">
+                    <div class="desc">By Time</div>
+                    <img src="../pages/01.png" alt="Cinque Terre" width="600" height="400">
+                    <div class="desc"><button class="button" onclick="window.open('time.html', '_self')">View</button></div>
                 </div>
-            </div>
-            <div class="col-sm-5">
-                    <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="../pages/02.PNG" alt="Card image cap">
-                            <div class="card-body" style="padding: 10px;">
-                                <a href="../journey/journey.html" class="btn btn-primary">PLACE</a>
-                            </div>
-                        </div>
                 </div>
-        </div>
-        <div class="row">
-                <div class="col-sm-5">
-                    <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="../pages/03.PNG" alt="Card image cap">
-                            <div class="card-body" style="padding: 10px;">
-                                <a href="../journey/journey.html" class="btn btn-primary">PEOPLE</a>
-                            </div>
+                <div class="responsive">
+                    <div class="gallery">
+                        <div class="desc">By Place</div>
+                        <img src="../pages/01.png" alt="Cinque Terre" width="600" height="400">
+                        <div class="desc"><button class="button" onclick="window.open('place.html', '_self')">View</button></div>
                     </div>
                 </div>
-                <div class="col-sm-5">
-                        <div class="card" style="width: 18rem;">
-                                <img class="card-img-top" src="../pages/02.PNG" alt="Card image cap">
-                                <div class="card-body" style="padding: 10px;">
-                                    <a href="../journey/journey.html" class="btn btn-primary">EVENTS</a>
-                                </div>
-                            </div>
+                <div class="responsive">
+                    <div class="gallery">
+                        <div class="desc">By People</div>
+                        <img src="../pages/01.png" alt="Cinque Terre" width="600" height="400">
+                        <div class="desc"><button class="button" onclick="window.open('people.html', '_self')">View</button></div>
                     </div>
+                </div>
+                <div class="responsive">
+                    <div class="gallery">
+                        <div class="desc">By Event</div>
+                        <img src="../pages/01.png" alt="Cinque Terre" width="600" height="400">
+                        <div class="desc"><button class="button" onclick="window.open('events.html', '_self')">View</button></div>
+                    </div>
+                </div>
             </div>
 
         <h3>Your Categories</h3>
         <div class="row">
-                <div class="col-sm-5">
-                    <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="../pages/01.PNG" alt="Card image cap">
-                            <div class="card-body" style="padding: 10px;">
-                                <a href="../journey/journey.html" class="btn btn-primary">FLOWERS</a>
-                            </div>
+            <div class="responsive">
+                <div class="gallery">
+                    <div class="desc">Flowers</div>
+                    <img src="../pages/01.png" alt="Cinque Terre" width="600" height="400">
+                    <div class="desc"><button class="button" onclick="toJourneys()">View</button></div>
+                </div>
+                </div>
+                <div class="responsive">
+                    <div class="gallery">
+                        <div class="desc">Grandkids </div>
+                        <img src="../pages/01.png" alt="Cinque Terre" width="600" height="400">
+                        <div class="desc"><button class="button" onclick="toJourneys()">View</button></div>
                     </div>
                 </div>
-                <div class="col-sm-5">
-                        <div class="card" style="width: 18rem;">
-                                <img class="card-img-top" src="../pages/02.PNG" alt="Card image cap">
-                                <div class="card-body" style="padding: 10px;">
-                                    <a href="../journey/journey.html" class="btn btn-primary">GRANDKIDS</a>
-                                </div>
-                            </div>
-                    </div>
-            </div>
+        </div>
     </div>
+
+     <!-- Action buttons -->
+     <a href="settings.html"><img src="../assets/Settings.png" alt="?"id="gear"></a>
+     <a href="settings.html"><img src="../assets/Help_Support.png" alt="i"id="info"></a>
 
     <!--  JS Functionality -->
     <script>
-        window.onscroll = function () { myFunction() };
+        window.onscroll = function () { stickyFunction() };
 
         var header = document.getElementById("appNameHeader");
         var sticky = header.offsetTop;
 
-        function myFunction() {
+        function stickyFunction() {
             if (window.pageYOffset > sticky) {
                 header.classList.add("sticky");
             } else {
                 header.classList.remove("sticky");
             }
         }
+
         function toJourneys() {
-            window.open("./journey/journey.html")
+            window.open("../journey/journey.html", "_self");
         }
 
-        var slideIndex = 1;
-        showDivs(slideIndex);
-        function plusDivs(n) {
-            showDivs(slideIndex += n);
-        }
+        // var slideIndex = 1;
+        // showDivs(slideIndex);
+        // function plusDivs(n) {
+        //     showDivs(slideIndex += n);
+        // }
 
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("suggestedSlides");
-            if (n > x.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = x.length }
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex - 1].style.display = "block";
-        }
+        // function showDivs(n) {
+        //     var i;
+        //     var x = document.getElementsByClassName("suggestedSlides");
+        //     if (n > x.length) { slideIndex = 1 }
+        //     if (n < 1) { slideIndex = x.length }
+        //     for (i = 0; i < x.length; i++) {
+        //         x[i].style.display = "none";
+        //     }
+        //     x[slideIndex - 1].style.display = "block";
+        // }
     </script>
 </body>
 

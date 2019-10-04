@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="categories.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>Memory Lane</title>
+</head>
+
+<body>
+    <!-- Header Navigation -->
+    <div class="header" id="appNameHeader">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <p class="navbar-brand" style="position:absolute;top:50;left:45%;float:left;"><a href="index.html"><img src="../Assets/Logo.png" alt="MemoryLane"></a></p>
+            </div>
+            <ul class="nav navbar-nav">
+                    <li><a href="../categories/categories.html"><img src="../../Assets/Photos.png"> CATEGORIES</a></li>
+                    <li><a href="#"><img src="../assets/Add.png" alt=""> UPLOAD PHOTOS</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--  Body - Journey Albums (Add multiple w. headings) -->
+    <!-- TODO: need to fix the width + height of all photo elements, for using personal ones. -->
+    <!-- Can set class="card w-<%num>" -->
+    <div class="body-content">
+        <h2>People</h2>
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="../pages/01.PNG" alt="Card image cap">
+                        <div class="card-body" style="padding: 10px;">
+                            <a href="../journey/journey.html" class="btn btn-primary">Melody P</a>
+                        </div>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                    <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="../pages/02.PNG" alt="Card image cap">
+                            <div class="card-body" style="padding: 10px;">
+                                <a href="../journey/journey.html" class="btn btn-primary">John S</a>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="row">
+                <div class="col-sm-5">
+                    <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="../pages/03.PNG" alt="Card image cap">
+                            <div class="card-body" style="padding: 10px;">
+                                <a href="../journey/journey.html" class="btn btn-primary">Jane D</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                        <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="../pages/02.PNG" alt="Card image cap">
+                                <div class="card-body" style="padding: 10px;">
+                                    <a href="../journey/journey.html" class="btn btn-primary">Paul S</a>
+                                </div>
+                            </div>
+                    </div>
+            </div>
+    </div>
+
+    <!--  JS Functionality -->
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var header = document.getElementById("appNameHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("suggestedSlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
