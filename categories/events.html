@@ -18,45 +18,37 @@
                 <li><a href="categories.html"><span class="glyphicon glyphicon-chevron-left"></span>Back</a></li>
             </ul>
             <div class="navbar-header">
-                <p class="navbar-brand" style="position:absolute;top:50;left:43%;float:left;"><a href="index.html"><img src="../../Assets/Logo.png" alt="MemoryLane"></a></p>
+                <p class="navbar-brand" style="position:absolute;top:50;left:43%;float:left;"><a href="../index.html"><img src="../assets/Logo.png" alt="MemoryLane"></a></p>
             </div>
             <ul class="nav navbar-nav">
-                    <li><a href="../categories/categories.html"><img src="../Assets/Photos.png"> CATEGORIES</a></li>
-                    <li><a href="upoad.html"><img src="../assets/Add.png" alt=""> UPLOAD PHOTOS</a></li>
+                    <li><a href="categories.html"><img src="../assets/Photos.png"> CATEGORIES</a></li>
+                    <li><a href="../upload.html"><img src="../assets/Add.png" alt=""> UPLOAD PHOTOS</a></li>
             </ul>
         </div>
     </div>
     <!--  Body - Journey Albums (Add multiple w. headings) -->
-    <!-- TODO: need to fix the width + height of all photo elements, for using personal ones. -->
-    <!-- Can set class="card w-<%num>" -->
     <div class="body-content">
         <h2>Events</h2>
-        <div class="row">
-            <div class="col-sm-5">
-                <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="../pages/01.PNG" alt="Card image cap">
-                        <div class="card-body" style="padding: 10px;">
-                            <a href="../journey/journey.html" class="btn btn-primary">Jane's Graduation</a>
-                        </div>
+        <div class="w3-row">
+            <div class="responsive">
+                <div class="gallery">
+                    <div class="desc" style="font-weight:bold">Jane's Graduation</div>
+                    <img src="../pages/grad.jpeg" width="600" height="400">
+                    <div class="desc"><button class="button" onclick="toJourneys()">Start Photo Lane</button></div>
                 </div>
             </div>
-            <div class="col-sm-5">
-                    <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="../pages/02.PNG" alt="Card image cap">
-                            <div class="card-body" style="padding: 10px;">
-                                <a href="../journey/journey.html" class="btn btn-primary">Christmas 2017</a>
-                            </div>
-                        </div>
+            <div class="responsive">
+                <div class="gallery">
+                    <div class="desc" style="font-weight:bold">Christmas 2017</div>
+                    <img src="../pages/christmas.PNG" width="600" height="400">
+                    <div class="desc"><button class="button" onclick="toJourneys()">Start Photo Lane</button></div>
                 </div>
-        </div>
-        <div class="row">
-                <div class="col-sm-5">
-                    <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="../pages/03.PNG" alt="Card image cap">
-                            <div class="card-body" style="padding: 10px;">
-                                <a href="../journey/journey.html" class="btn btn-primary">Fiji Trip Nov 2017</a>
-                            </div>
-                    </div>
+            </div>
+            <div class="responsive">
+                <div class="gallery">
+                    <div class="desc" style="font-weight:bold">Fiji Nov 2017</div>
+                    <img src="../pages/swimming.PNG" width="600" height="400">
+                    <div class="desc"><button class="button" onclick="toJourneys()">Start Photo Lane</button></div>
                 </div>
             </div>
     </div>
@@ -74,6 +66,10 @@
             } else {
                 header.classList.remove("sticky");
             }
+        }
+
+        function toJourneys() {
+            window.open("../journey/journey.html", "_self")
         }
 
         var slideIndex = 1;
