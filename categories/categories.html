@@ -29,7 +29,9 @@
     </div>
     <!--  Body - Journey Albums  -->
     <div class="body-content">
-        <h2>Categories</h2>
+        <button class="button nav navbar-nav navbar-right" style="padding: 15px;" onclick="toggleShow()">Delete</button>
+        <button class="button nav navbar-nav navbar-right" style="padding: 15px;" onclick="toggleShow()">Add</button>
+        <h2 >Categories</h2>
         <div class="w3-row">
             <div class="responsive">
                 <div class="gallery">
@@ -77,6 +79,13 @@
                         <div class="desc"><button class="button" onclick="toJourneys()">View</button></div>
                     </div>
                 </div>
+                <div id="toggler" class="responsive" style="display: none;">
+                    <div class="gallery">
+                        <div class="desc" style="font-weight:bold"> New Category </div>
+                        <img src="../pages/dog.PNG" width="600" height="400">
+                        <div class="desc"><button class="button" onclick="toJourneys()">View</button></div>
+                    </div>
+                </div>
         </div>
 
         <h3>Favourites</h3>
@@ -117,26 +126,18 @@
             }
         }
 
+        function toggleShow() {
+            var x = document.getElementById("toggler");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
         function toJourneys() {
             window.open("../journey/journey.html", "_self");
         }
-
-        // var slideIndex = 1;
-        // showDivs(slideIndex);
-        // function plusDivs(n) {
-        //     showDivs(slideIndex += n);
-        // }
-
-        // function showDivs(n) {
-        //     var i;
-        //     var x = document.getElementsByClassName("suggestedSlides");
-        //     if (n > x.length) { slideIndex = 1 }
-        //     if (n < 1) { slideIndex = x.length }
-        //     for (i = 0; i < x.length; i++) {
-        //         x[i].style.display = "none";
-        //     }
-        //     x[slideIndex - 1].style.display = "block";
-        // }
     </script>
 </body>
 
