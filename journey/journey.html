@@ -18,15 +18,14 @@
 
 <body>
 	<!-- Header Navigation -->
-	<!-- Header Navigation -->
 	<div class="header" id="appNameHeader">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<p class="navbar-brand" style="position:absolute;top:50;left:45%;float:left;"><a href="../index.html"><img src="../Assets/Logo.png" alt="MemoryLane"></a></p>
+				<p class="navbar-brand" style="position:absolute;top:50;left:43%;float:left;"><a href="../index.html"><img src="../Assets/Logo.png" alt="MemoryLane"></a></p>
 			</div>
 			<ul class="nav navbar-nav">
 				<li><a href="categories/categories.html"><img src="../Assets/Photos.png"> CATEGORIES</a></li>
-				<li><a href="#"><img src="../assets/Add.png" alt=""> UPLOAD PHOTOS</a></li>
+				<li><a href="upload.html"><img src="../assets/Add.png" alt=""> UPLOAD PHOTOS</a></li>
 			</ul>
 		</div>
 	</div>
@@ -34,11 +33,11 @@
 	<div>
 		<div class="album-header">
 			<ul>
-				<!-- Need variable for Journey Name -->
+				<!-- Variable for Journey Name? -->
 				<li>August 2019 at Lane Cove</li>
 				<!-- Need variables for current page # and total pages -->
-				<li><span id="pageNum">1</span> of 4 pages </li>
-				<!-- Add current album to favourites list -->
+				<li><span id="pageNum">0</span> of 4 pages </li>
+				<!-- Add current album to favourites list? -->
 				<li><button id="favourite" onclick="addFav()"><i class="fa fa-star-o"></i> Add to Favourites</button></li>
 			</ul>
 		</div>
@@ -47,9 +46,9 @@
 	<!-- style to be more aesthetic-->
 	<div class="w3-row">
 		<div class="w3-col wrapper" style="width:10%">
-			<img src="../assets/ActiveLeft.png" class="btn" onclick="previousPage()">
+			<img src="../assets/ActiveLeft.png" id="btnLeft" class="btn" onclick="previousPage()">
 		</div>
-		<div class="w3-col" style="width:80%">
+		<div class="w3-col" style="padding-left:250px;width:80%">
 			<div id="magazine">
 				<div style="background-image:url(pages/album-cover.png);"></div>
 				<div style="background-image:url(pages/blank.png);">
@@ -89,29 +88,32 @@
 					<img id="myImg" src="pages/05.png" alt="Snow" style="padding-top:50px;max-width:300px">
 					<!-- Convo -->
 					<div class="popup-convo">
-						<span class="popuptext" id="myPopup">What were you all baking that day?</span>
+						<span class="popuptext" id="myPopup">What were you baking that day?</span>
 					</div>
 				</div>
 				<div style="background-image:url(pages/album-back.png);">
 					<!-- last card should be end & take to home -->
 				</div>
 				<div style="background-image:url(pages/white.png);" class="popup">
-					<button class="w3-display-middle w3-container w3-padding-16 w3-black" onclick="location.href='./../index.html'">
-						Back to Journeys
-					</button>
+					<div class="gallery" style="padding-left:50px;padding-top:10px">
+						<div class="desc" style="padding:10px;font-weight:bold"><span class="noBold">More Similar Photos</span><br><br> Christmas 2018 </div>
+						<img src="../pages/christmas.png" alt="Christmas 2018" width="400" style="padding-left:50px;">
+						<div class="desc" style="padding:10px;"><button class="button" class="button" onclick="window.open('journey.html', '_self')">Start Photo Lane</button></div>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="w3-col wrapper" style="width:10%">
-			<img src="../assets/ActiveRight.png" class="btn" onclick="nextPage()">
+			<img src="../assets/ActiveRight.png" id="btnRight" class="btn" onclick="nextPage()">
 		</div>
 	</div>
+
 	<!-- The Modal -->
-	<div class="myModal modal">
+	<!-- <div class="myModal modal">
 		<span class="close">&times;</span>
 		<img class="modal-content" id="img01">
 		<div id="caption"></div>
-	</div>
+	</div> -->
 
 	<!--  JS Functionality -->
 	<script type="text/javascript">
@@ -130,33 +132,60 @@
 			});
 		});
 
-		function previousPage() {
-			var elem = document.getElementById("pageNum").innerHTML;
-			$("#magazine").turn("previous");
-			if (elem != '1') {
-				--elem;
+		var count = 0;
+		document.getElementById("btnLeft").style.visibility = "hidden";
+
+		function updateUI() {
+			$("#pageNum").text(count);
+			if (count >= 4) {
+				document.getElementById("btnRight").style.visibility = "hidden";
+			} else {
+				document.getElementById("btnRight").style.visibility = "visible";
 			}
+
+			if (count < 1) {
+				document.getElementById("btnLeft").style.visibility = "hidden";
+			} else {
+				document.getElementById("btnLeft").style.visibility = "visible";
+			}
+		}
+
+		function calculateCount(value) {
+			count += value;
+			updateUI();
+		}
+
+		function init() {
+			updateUI();
+		};
+
+		function previousPage() {
+			calculateCount(-1);
+			$("#magazine").turn("previous");
 		}
 
 		function nextPage() {
-			var elem = document.getElementById("pageNum").innerHTML;
+			calculateCount(1);
 			$("#magazine").turn("next");
-			if (elem != '4') {
-				++elem;
-			}
 		}
 
 		$(window).bind("keydown", function (e) {
-			if (e.keyCode == 37) $("#magazine").turn("previous");
-			else if (e.keyCode == 39) $("#magazine").turn("next");
+			if (e.keyCode == 37){
+				$("#magazine").turn("previous");
+				calculateCount(-1);
+			} 
+			else if (e.keyCode == 39){
+				$("#magazine").turn("next");
+				calculateCount(1);
+			}  
 		});
 
-		// Click to hide and show
-		function convoCard() {
-			var popup = document.getElementById("myPopup");
-			popup.classList.toggle("show");
-			// popup.style.visibility = "hidden";
-		}
+		// // Click to hide and show
+		// function convoCard() {
+		// 	var popup = document.getElementById("myPopup");
+		// 	popup.classList.toggle("show");
+		// 	// popup.style.visibility = "hidden";
+		// }
 
 		function addFav() {
 			var elem = document.getElementById("favourite");
@@ -164,27 +193,27 @@
 			else elem.innerHTML = '<i class="fa fa-star-o"></i>' + " Add to Favourites";
 		}
 
-		// Get the modal
-		var modal = document.getElementById("myModal");
+		// // Get the modal
+		// var modal = document.getElementById("myModal");
 
-		// Get the image and insert it inside the modal - use its "alt" text as a caption
-		var img = document.getElementsByClassName("myImg");
-		var modalImg = document.getElementById("img01");
-		var captionText = document.getElementById("caption");
+		// // Get the image and insert it inside the modal - use its "alt" text as a caption
+		// var img = document.getElementsByClassName("myImg");
+		// var modalImg = document.getElementById("img01");
+		// var captionText = document.getElementById("caption");
 
-		img.onclick = function () {
-			modal.style.display = "block";
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
+		// img.onclick = function () {
+		// 	modal.style.display = "block";
+		// 	modalImg.src = this.src;
+		// 	captionText.innerHTML = this.alt;
+		// }
 
-		// Get the <span> element that closes the modal
-		var span = document.getElementsByClassName("close")[0];
+		// // Get the <span> element that closes the modal
+		// var span = document.getElementsByClassName("close")[0];
 
-		// When the user clicks on <span> (x), close the modal
-		span.onclick = function () {
-			modal.style.display = "none";
-		}
+		// // When the user clicks on <span> (x), close the modal
+		// span.onclick = function () {
+		// 	modal.style.display = "none";
+		// }
 	</script>
 </body>
 
