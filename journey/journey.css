@@ -78,6 +78,14 @@ p {
     top: 50%;
   }
 
+  #btnLeft {
+    padding-right:-100px;
+  }
+
+  #btnRight {
+    padding-left:40px;
+  }
+
   .button {
     background-color: #14A085; /* Green */
     border: none;
