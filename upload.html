@@ -9,9 +9,25 @@
     <title>MemoryLane</title>
 </head>
 
-<body>
-    <img class="centre" src="assets/splash.png" alt="Memory Lane">
-    <button class="button" onclick="window.open('index.html', '_self')">Get Started</button>
+<body style="background-color:#FCFFFE">
+    <img class="headLogo" src="assets/Logo.png" alt="Memory Lane">
+    <div id="uploading">
+        <img class="centreCover" width="320px" src="assets/Upload-Cover.png" alt="Uploading...">
+    </div>
+    <img id="uploaded" class="centreModal" src="assets/Upload2.png" alt="Uploaded!">
+    <button class="centreUnsized button" onclick="window.open('index.html', '_self')">Get Started</button>
+
+    <script>
+        upload();
+
+        function upload() {
+            var upload = document.getElementById("uploading");
+            setTimeout(function () {
+                upload.style.visibility = "hidden";
+            }, 3000);
+        }
+    </script>
+
 </body>
 
 </html>

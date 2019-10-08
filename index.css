@@ -74,14 +74,6 @@ body {
   }
 
   /* W3 - Image Gallery */
-  /* div.gallery {
-    border: 1px solid #ccc;
-  }
-  
-  div.gallery:hover {
-    border: 1px solid #777;
-  } */
-  
   div.gallery img {
     width: 100%;
     height: auto;
@@ -193,6 +185,49 @@ body {
   }
 
   /*Upload Screen*/
+  .headLogo {
+    padding-top: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .centreModal {
+    width: 30%;
+    margin: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .centreUnsized {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .centreCover {
+    position: fixed;
+    top: 15%;
+    left: 34.5%;
+  }
+
+  #uploading {
+    visibility: visible;
+    animation-name: "fadeOut";
+    animation-duration: 2s;
+    animation-delay: 3s;
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity:1
+    }
+    100% {
+      opacity:0;
+    }
+  }
+  
 
   /*Welcome Screen*/
   .carouselImg {
