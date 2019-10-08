@@ -22,6 +22,7 @@ body {
   }
 
   .button {
+    font-family: Nunito;
     background-color: #14A085; /* Green */
     border: none;
     border-radius: 4px;
@@ -193,7 +194,7 @@ body {
   }
 
   .centreModal {
-    width: 30%;
+    width: 50%;
     margin: 30px;
     display: block;
     margin-left: auto;
@@ -209,7 +210,7 @@ body {
   .centreCover {
     position: fixed;
     top: 15%;
-    left: 34.5%;
+    left: 25%;
   }
 
   #uploading {
