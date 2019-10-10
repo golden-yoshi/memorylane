@@ -259,3 +259,17 @@ body {
     background-color: white;
     border-radius: 50%;
   }
+
+  /* Welcome Screen */
+  .btn {
+    position: absolute;
+    top: 50%;
+  }
+
+  /* #btnLeft {
+    padding-right:-100px;
+  }
+
+  #btnRight {
+    padding-left:40px;
+  } */
