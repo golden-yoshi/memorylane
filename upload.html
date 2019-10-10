@@ -15,7 +15,7 @@
         <img class="centreCover" style="display:block;" width="520px" src="./assets/Upload-Cover.PNG" alt="Uploading...">
     </div>
     <img id="uploaded" style="display:none;" class="centreModal" src="./assets/upload2.PNG" alt="Uploaded!">
-    <button class="centreUnsized button" width="420px" onclick="window.open('index.html', '_self')">Get Started</button>
+    <button id="postupload" style="display:none" class="centreUnsized button" width="420px" onclick="window.open('index.html', '_self')">Get Started</button>
 
     <script>
         upload();
@@ -24,9 +24,11 @@
             console.log("before element display changes");
             var upload = document.getElementById("uploading");
             var uploaded = document.getElementById("uploaded");
+            var button = document.getElementById("postupload");
             setTimeout(function () {
                 upload.style.display = "none";
                 uploaded.style.display = "block";
+                button.style.display = "block";
                 // upload.style.WebkitAnimationPlayState = "running";
             }, 3000);
             console.log("after element display changes");
