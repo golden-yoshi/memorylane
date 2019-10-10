@@ -38,9 +38,6 @@
 		<div class="album-header">
 			<ul>
 				<li>August 2019 at Lane Cove</li>
-				<!-- Page Numbers Hidden for Video -->
-				<!-- <li><span id="pageNum">0</span> of 4 pages </li> -->
-				<!-- Add current album to favourites list? -->
 				<li><button id="favourite" onclick="addFav()"><i class="fa fa-star-o"></i> Add to Favourites</button>
 				</li>
 			</ul>
@@ -57,15 +54,15 @@
 				<div style="background-image:url(pages/album-cover.png);"></div>
 				<div style="background-image:url(../pages/blank.png);">
 					<!-- Top Image -->
-					<img src="../pages/01.PNG" alt="Snow" style="padding-top:50px;max-width:300px">
+					<img src="../pages/video_photos/Holiday-Melbourne-1.jpg" alt="Snow" style="padding-top:50px;max-width:300px">
 					<!-- Bottom Image -->
-					<img src="../pages/02.PNG" alt="Snow" style="padding-top:50px;max-width:300px">
+					<img src="../pages/video_photos/Holiday-Melbourne-2.jpg" alt="Snow" style="padding-top:50px;max-width:300px">
 				</div>
 				<div style="background-image:url(../pages/blank.png);">
 					<!-- Top Image -->
-					<img src="../pages/03.PNG" alt="Snow" style="padding-top:50px;max-width:300px">
+					<img src="../pages/video_photos/Holiday-Melbourne-3.jpg" alt="Snow" style="padding-top:50px;max-width:300px">
 					<!-- Bottom Image -->
-					<img src="../pages/04.PNG" alt="Snow" style="padding-top:50px;max-width:300px">
+					<img src="../pages/video_photos/Holiday-Melbourne-4.jpg" alt="Snow" style="padding-top:50px;max-width:300px">
 				</div>
 				<div style="background-image:url(../pages/blank.png);">
 					<!-- Convo -->
@@ -73,23 +70,23 @@
 						<span class="popuptext" id="myPopup">Who were you with that day?</span>
 					</div>
 					<!-- Bottom Image -->
-					<img src="../pages/05.PNG" alt="Snow" style="padding-top:50px;max-width:300px">
+					<img src="../pages/video_photos/Holiday-Melbourne-5.jpg" alt="Snow" style="padding-top:50px;max-width:300px">
 				</div>
 				<div style="background-image:url(../pages/blank.png);">
 					<!-- Top Image -->
-					<img src="../pages/06.PNG" alt="Snow" style="padding-top:50px;max-width:300px">
+					<img src="../pages/video_photos/Holiday-Melbourne-6.jpg" alt="Snow" style="padding-top:50px;max-width:300px">
 					<!-- Bottom Image -->
 					<img src="../pages/07.PNG" alt="Snow" style="padding-top:50px;max-width:300px">
 				</div>
 				<div style="background-image:url(../pages/blank.png);">
 					<!-- Top Image -->
-					<img class=" " src="../pages/01.PNG" alt="Snow" style="padding-top:50px;max-width:300px">
+					<img class=" " src="../pages/video_photos/Holiday-Melbourne-7.jpg" alt="Snow" style="padding-top:50px;max-width:300px">
 					<!-- Bottom Image -->
-					<img class=" " src="../pages/03.PNG" alt="Snow" style="padding-top:50px;max-width:300px">
+					<img class=" " src="../pages/video_photos/Food-3.jpg" alt="Snow" style="padding-top:50px;max-width:300px">
 				</div>
 				<div style="background-image:url(../pages/blank.png);">
 					<!-- Top Image -->
-					<img src="../pages/05.PNG" alt="Snow" style="padding-top:50px;max-width:300px">
+					<img src="../pages/video_photos/Food-1.jpg" alt="Snow" style="padding-top:50px;max-width:300px">
 					<!-- Convo -->
 					<div class="popup-convo">
 						<span class="popuptext" id="myPopup">What were you baking that day?</span>
@@ -102,7 +99,7 @@
 					<div class="gallery" style="padding-left:50px;padding-top:10px">
 						<div class="desc" style="padding:10px;font-weight:bold"><span class="noBold">More Similar
 								Photos</span><br><br> Christmas 2018 </div>
-						<img src="../pages/christmas.PNG" alt="Christmas 2018" width="400" style="padding-left:50px;">
+						<img src="../pages/video_photos/Camping-2.jpg" alt="Christmas 2018" width="400" style="padding-left:50px;">
 						<div class="desc" style="padding:10px;"><button class="button" class="button"
 								onclick="window.open('journey.html', '_self')">Start Photo Lane</button></div>
 					</div>
@@ -113,13 +110,6 @@
 			<img src="../assets/ActiveRight.png" id="btnRight" class="btn" onclick="nextPage()">
 		</div>
 	</div>
-
-	<!-- The Modal -->
-	<!-- <div class="myModal modal">
-		<span class="close">&times;</span>
-		<img class="modal-content" id="img01">
-		<div id="caption"></div>
-	</div> -->
 
 	<!--  JS Functionality -->
 	<script type="text/javascript">
@@ -191,28 +181,6 @@
 				'<i class="fa fa-star"></i>' + " Remove from Favourites";
 			else elem.innerHTML = '<i class="fa fa-star-o"></i>' + " Add to Favourites";
 		}
-
-		// // Get the modal
-		// var modal = document.getElementById("myModal");
-
-		// // Get the image and insert it inside the modal - use its "alt" text as a caption
-		// var img = document.getElementsByClassName(" ");
-		// var modalImg = document.getElementById("img01");
-		// var captionText = document.getElementById("caption");
-
-		// img.onclick = function () {
-		// 	modal.style.display = "block";
-		// 	modalImg.src = this.src;
-		// 	captionText.innerHTML = this.alt;
-		// }
-
-		// // Get the <span> element that closes the modal
-		// var span = document.getElementsByClassName("close")[0];
-
-		// // When the user clicks on <span> (x), close the modal
-		// span.onclick = function () {
-		// 	modal.style.display = "none";
-		// }
 	</script>
 </body>
 
