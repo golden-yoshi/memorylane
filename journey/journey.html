@@ -24,10 +24,11 @@
 				<li><a href="../index.html"><span class="glyphicon glyphicon-chevron-left"></span>Back</a></li>
 			</ul>
 			<div class="navbar-header">
-				<p class="navbar-brand" style="position:absolute;top:50;left:37%;float:left;"><a href="../index.html"><img src="../Assets/Logo.png" alt="MemoryLane"></a></p>
+				<p class="navbar-brand" style="position:absolute;top:50;left:37%;float:left;"><a
+						href="../index.html"><img src="../assets/Logo.png" alt="MemoryLane"></a></p>
 			</div>
 			<ul class="nav navbar-nav">
-				<li><a href="../categories/categories.html"><img src="../Assets/Photos.png"> CATEGORIES</a></li>
+				<li><a href="../categories/categories.html"><img src="../assets/Photos.png"> CATEGORIES</a></li>
 				<li><a href="upload.html"><img src="../assets/Add.png" alt=""> UPLOAD PHOTOS</a></li>
 			</ul>
 		</div>
@@ -40,13 +41,14 @@
 				<!-- Page Numbers Hidden for Video -->
 				<!-- <li><span id="pageNum">0</span> of 4 pages </li> -->
 				<!-- Add current album to favourites list? -->
-				<li><button id="favourite" onclick="addFav()"><i class="fa fa-star-o"></i> Add to Favourites</button></li>
+				<li><button id="favourite" onclick="addFav()"><i class="fa fa-star-o"></i> Add to Favourites</button>
+				</li>
 			</ul>
 		</div>
 	</div>
 
 	<!-- style to be more aesthetic //  style="padding-left:10px"-->
-	<div class="w3-row"  >
+	<div class="w3-row">
 		<div class="w3-col wrapper" style="width:3%">
 			<img src="../assets/ActiveLeft.png" id="btnLeft" class="btn" onclick="previousPage()">
 		</div>
@@ -55,7 +57,7 @@
 				<div style="background-image:url(pages/album-cover.png);"></div>
 				<div style="background-image:url(../pages/blank.png);">
 					<!-- Top Image -->
-					<img   src="../pages/01.PNG" alt="Snow" style="padding-top:50px;max-width:300px">
+					<img src="../pages/01.PNG" alt="Snow" style="padding-top:50px;max-width:300px">
 					<!-- Bottom Image -->
 					<img src="../pages/02.PNG" alt="Snow" style="padding-top:50px;max-width:300px">
 				</div>
@@ -75,9 +77,9 @@
 				</div>
 				<div style="background-image:url(../pages/blank.png);">
 					<!-- Top Image -->
-					<img   src="../pages/06.PNG" alt="Snow" style="padding-top:50px;max-width:300px">
+					<img src="../pages/06.PNG" alt="Snow" style="padding-top:50px;max-width:300px">
 					<!-- Bottom Image -->
-					<img   src="../pages/07.PNG" alt="Snow" style="padding-top:50px;max-width:300px">
+					<img src="../pages/07.PNG" alt="Snow" style="padding-top:50px;max-width:300px">
 				</div>
 				<div style="background-image:url(../pages/blank.png);">
 					<!-- Top Image -->
@@ -87,7 +89,7 @@
 				</div>
 				<div style="background-image:url(../pages/blank.png);">
 					<!-- Top Image -->
-					<img   src="../pages/05.PNG" alt="Snow" style="padding-top:50px;max-width:300px">
+					<img src="../pages/05.PNG" alt="Snow" style="padding-top:50px;max-width:300px">
 					<!-- Convo -->
 					<div class="popup-convo">
 						<span class="popuptext" id="myPopup">What were you baking that day?</span>
@@ -98,9 +100,11 @@
 				</div>
 				<div style="background-image:url(pages/white.png);" class="popup">
 					<div class="gallery" style="padding-left:50px;padding-top:10px">
-						<div class="desc" style="padding:10px;font-weight:bold"><span class="noBold">More Similar Photos</span><br><br> Christmas 2018 </div>
+						<div class="desc" style="padding:10px;font-weight:bold"><span class="noBold">More Similar
+								Photos</span><br><br> Christmas 2018 </div>
 						<img src="../pages/christmas.PNG" alt="Christmas 2018" width="400" style="padding-left:50px;">
-						<div class="desc" style="padding:10px;"><button class="button" class="button" onclick="window.open('journey.html', '_self')">Start Photo Lane</button></div>
+						<div class="desc" style="padding:10px;"><button class="button" class="button"
+								onclick="window.open('journey.html', '_self')">Start Photo Lane</button></div>
 					</div>
 				</div>
 			</div>
@@ -172,19 +176,19 @@
 		}
 
 		$(window).bind("keydown", function (e) {
-			if (e.keyCode == 37){
+			if (e.keyCode == 37) {
 				$("#magazine").turn("previous");
 				calculateCount(-1);
-			} 
-			else if (e.keyCode == 39){
+			} else if (e.keyCode == 39) {
 				$("#magazine").turn("next");
 				calculateCount(1);
-			}  
+			}
 		});
 
 		function addFav() {
 			var elem = document.getElementById("favourite");
-			if (elem.innerHTML == '<i class="fa fa-star-o"></i>' + " Add to Favourites") elem.innerHTML = '<i class="fa fa-star"></i>' + " Remove from Favourites";
+			if (elem.innerHTML == '<i class="fa fa-star-o"></i>' + " Add to Favourites") elem.innerHTML =
+				'<i class="fa fa-star"></i>' + " Remove from Favourites";
 			else elem.innerHTML = '<i class="fa fa-star-o"></i>' + " Add to Favourites";
 		}
 

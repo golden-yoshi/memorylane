@@ -34,62 +34,33 @@
             <div class="responsive">
                 <div class="gallery">
                     <div class="desc" style="font-weight:bold">Amy</div>
-                    <img src="../pages/amy.png" width="600" height="400">
+                    <img src="../pages/amy.PNG" width="600" height="400">
                     <div class="desc"><button class="button" onclick="toJourneys()">Start Photo Lane</button></div>
                 </div>
             </div>
             <div class="responsive">
                 <div class="gallery">
                     <div class="desc" style="font-weight:bold">Lily</div>
-                    <img src="../pages/dog.png" width="600" height="400">
+                    <img src="../pages/dog.PNG" width="600" height="400">
                     <div class="desc"><button class="button" onclick="toJourneys()">Start Photo Lane</button></div>
                 </div>
             </div>
             <div class="responsive">
                 <div class="gallery">
                     <div class="desc" style="font-weight:bold">Sarah</div>
-                    <img src="../pages/snow.png" width="600" height="400">
+                    <img src="../pages/snow.PNG" width="600" height="400">
                     <div class="desc"><button class="button" onclick="toJourneys()">Start Photo Lane</button></div>
                 </div>
             </div>
             <div class="responsive">
                 <div class="gallery">
                     <div class="desc" style="font-weight:bold">Jane</div>
-                    <img src="../pages/jane.png" width="600" height="400">
+                    <img src="../pages/jane.PNG" width="600" height="400">
                     <div class="desc"><button class="button" onclick="toJourneys()">Start Photo Lane</button></div>
                 </div>
             </div>
         </div>
-        <!-- <div class="w3-row">
-            <div class="responsive">
-                <div class="gallery">
-                    <div class="desc" style="font-weight:bold">Melody P</div>
-                    <img src="../pages/grad.jpeg" width="600" height="400">
-                    <div class="desc"><button class="button" onclick="toJourneys()">Start Photo Lane</button></div>
-                </div>
-            </div>
-            <div class="responsive">
-                <div class="gallery">
-                    <div class="desc" style="font-weight:bold">John S</div>
-                    <img src="../pages/grad.jpeg" width="600" height="400">
-                    <div class="desc"><button class="button" onclick="toJourneys()">Start Photo Lane</button></div>
-                </div>
-            </div>
-            <div class="responsive">
-                <div class="gallery">
-                    <div class="desc" style="font-weight:bold">Jane D</div>
-                    <img src="../pages/grad.jpeg" width="600" height="400">
-                    <div class="desc"><button class="button" onclick="toJourneys()">Start Photo Lane</button></div>
-                </div>
-            </div>
-            <div class="responsive">
-                <div class="gallery">
-                    <div class="desc" style="font-weight:bold">Paul S</div>
-                    <img src="../pages/grad.jpeg" width="600" height="400">
-                    <div class="desc"><button class="button" onclick="toJourneys()">Start Photo Lane</button></div>
-                </div>
-            </div>             -->
-        </div>
+    </div>
     </div>
 
     <!--  JS Functionality -->
@@ -113,27 +84,27 @@
             window.open("../journey/journey.html", "_self")
         }
 
-        var slideIndex = 1;
-        showDivs(slideIndex);
+        // var slideIndex = 1;
+        // showDivs(slideIndex);
 
-        function plusDivs(n) {
-            showDivs(slideIndex += n);
-        }
+        // function plusDivs(n) {
+        //     showDivs(slideIndex += n);
+        // }
 
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("suggestedSlides");
-            if (n > x.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = x.length
-            }
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex - 1].style.display = "block";
-        }
+        // function showDivs(n) {
+        //     var i;
+        //     var x = document.getElementsByClassName("suggestedSlides");
+        //     if (n > x.length) {
+        //         slideIndex = 1
+        //     }
+        //     if (n < 1) {
+        //         slideIndex = x.length
+        //     }
+        //     for (i = 0; i < x.length; i++) {
+        //         x[i].style.display = "none";
+        //     }
+        //     x[slideIndex - 1].style.display = "block";
+        // }
     </script>
 </body>
 
