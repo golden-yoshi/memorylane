@@ -24,11 +24,11 @@
 				<li><a href="../index.html"><span class="glyphicon glyphicon-chevron-left"></span>Back</a></li>
 			</ul>
 			<div class="navbar-header">
-				<p class="navbar-brand" style="position:absolute;top:50;left:43%;float:left;"><a href="../index.html"><img src="../assets/Logo.png" alt="MemoryLane"></a></p>
+				<p class="navbar-brand" style="position:absolute;top:50;left:37%;float:left;"><a href="../index.html"><img src="../Assets/Logo.png" alt="MemoryLane"></a></p>
 			</div>
 			<ul class="nav navbar-nav">
-				<li><a href="../categories/categories.html"><img src="../assets/Photos.png"> CATEGORIES</a></li>
-				<li><a href="../upload.html"><img src="../assets/Add.png" alt=""> UPLOAD PHOTOS</a></li>
+				<li><a href="../categories/categories.html"><img src="../Assets/Photos.png"> CATEGORIES</a></li>
+				<li><a href="upload.html"><img src="../assets/Add.png" alt=""> UPLOAD PHOTOS</a></li>
 			</ul>
 		</div>
 	</div>
@@ -36,22 +36,21 @@
 	<div>
 		<div class="album-header">
 			<ul>
-				<!-- Variable for Journey Name? -->
 				<li>August 2019 at Lane Cove</li>
-				<!-- Need variables for current page # and total pages -->
-				<li><span id="pageNum">0</span> of 4 pages </li>
+				<!-- Page Numbers Hidden for Video -->
+				<!-- <li><span id="pageNum">0</span> of 4 pages </li> -->
 				<!-- Add current album to favourites list? -->
 				<li><button id="favourite" onclick="addFav()"><i class="fa fa-star-o"></i> Add to Favourites</button></li>
 			</ul>
 		</div>
 	</div>
 
-	<!-- style to be more aesthetic-->
-	<div class="w3-row">
-		<div class="w3-col wrapper" style="width:10%">
+	<!-- style to be more aesthetic //  style="padding-left:10px"-->
+	<div class="w3-row"  >
+		<div class="w3-col wrapper" style="width:3%">
 			<img src="../assets/ActiveLeft.png" id="btnLeft" class="btn" onclick="previousPage()">
 		</div>
-		<div class="w3-col" style="padding-left:250px;width:80%">
+		<div class="w3-col" style="padding-left:100px;width:80%">
 			<div id="magazine">
 				<div style="background-image:url(pages/album-cover.png);"></div>
 				<div style="background-image:url(../pages/blank.png);">
@@ -182,13 +181,6 @@
 				calculateCount(1);
 			}  
 		});
-
-		// // Click to hide and show
-		// function convoCard() {
-		// 	var popup = document.getElementById("myPopup");
-		// 	popup.classList.toggle("show");
-		// 	// popup.style.visibility = "hidden";
-		// }
 
 		function addFav() {
 			var elem = document.getElementById("favourite");
