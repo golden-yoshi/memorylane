@@ -12,9 +12,9 @@
 <body style="background-color:#FCFFFE">
     <img class="headLogo" src="./assets/Logo.png" alt="Memory Lane">
     <div id="uploading">
-        <img class="centreCover" width="520px" src="./assets/Upload-Cover.PNG" alt="Uploading...">
+        <img class="centreCover" style="visibility:visible;" width="520px" src="./assets/Upload-Cover.PNG" alt="Uploading...">
     </div>
-    <img id="uploaded" class="centreModal" src="./assets/upload2.PNG" alt="Uploaded!">
+    <img id="uploaded" style="visibility:hidden;" class="centreModal" src="./assets/upload2.PNG" alt="Uploaded!">
     <button class="centreUnsized button" width="420px" onclick="window.open('index.html', '_self')">Get Started</button>
 
     <script>
@@ -22,8 +22,10 @@
 
         function upload() {
             var upload = document.getElementById("uploading");
+            var uploaded = document.getElementById("uploaded");
             setTimeout(function () {
                 upload.style.visibility = "hidden";
+                uploaded.style.visibility = "visible";
                 // upload.style.WebkitAnimationPlayState = "running";
             }, 3000);
         }
