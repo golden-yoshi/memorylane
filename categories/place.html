@@ -33,14 +33,14 @@
             <div class="responsive">
                 <div class="gallery">
                     <div class="desc" style="font-weight:bold">Sydney, NSW</div>
-                    <img src="../pages/sydney.png" width="600" height="400">
+                    <img src="../pages/sydney.PNG" width="600" height="400">
                     <div class="desc"><button class="button" onclick="toJourneys()">Start Photo Lane</button></div>
                 </div>
             </div>
             <div class="responsive">
                 <div class="gallery">
                     <div class="desc" style="font-weight:bold">Lane Cove, NSW</div>
-                    <img src="../pages/ipad.png" width="600" height="400">
+                    <img src="../pages/ipad.PNG" width="600" height="400">
                     <div class="desc"><button class="button" onclick="toJourneys()">Start Photo Lane</button></div>
                 </div>
             </div>
@@ -54,7 +54,7 @@
             <div class="responsive">
                 <div class="gallery">
                     <div class="desc" style="font-weight:bold">Orange, NSW</div>
-                    <img src="../pages/hay.png" width="600" height="400">
+                    <img src="../pages/hay.PNG" width="600" height="400">
                     <div class="desc"><button class="button" onclick="toJourneys()">Start Photo Lane</button></div>
                 </div>
             </div>
@@ -86,16 +86,16 @@
             window.open("../journey/journey.html", "_self")
         }
 
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("suggestedSlides");
-            if (n > x.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = x.length }
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex - 1].style.display = "block";
-        }
+        // function showDivs(n) {
+        //     var i;
+        //     var x = document.getElementsByClassName("suggestedSlides");
+        //     if (n > x.length) { slideIndex = 1 }
+        //     if (n < 1) { slideIndex = x.length }
+        //     for (i = 0; i < x.length; i++) {
+        //         x[i].style.display = "none";
+        //     }
+        //     x[slideIndex - 1].style.display = "block";
+        // }
     </script>
 </body>
 
