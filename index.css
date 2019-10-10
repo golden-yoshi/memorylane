@@ -8,265 +8,271 @@ body {
 .body-content {
   padding: 10px;
 }
+
 .header {
-    padding: 10px 16px;
-    background: #fff;
-    color: #555;
-    border-bottom: 1px solid #999;
-    text-align: center;
-  }
-  
-  .navbar-nav {
-    color: #555;
-    float: right;
-  }
+  padding: 10px 16px;
+  background: #fff;
+  color: #555;
+  border-bottom: 1px solid #999;
+  text-align: center;
+}
 
-  .button {
-    font-family: Nunito;
-    background-color: #14A085; /* Green */
-    border: none;
-    border-radius: 4px;
-    color: white;
-    padding: 10px 30px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
+.navbar-nav {
+  color: #555;
+  float: right;
+}
 
-  .button:hover {
-    background-color: #1bab82;
-  }
+.button {
+  font-family: Nunito;
+  background-color: #14A085;
+  /* Green */
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 
-  h2, h3, strong, p {
-    font-family: Nunito;
-    padding-left: 10px;
-    font-weight: bold;
-  }
+.button:hover {
+  background-color: #1bab82;
+}
 
-  h3 {
-    color: #14A085;
-  }
+h2,
+h3,
+strong,
+p {
+  font-family: Nunito;
+  padding-left: 10px;
+  font-weight: bold;
+}
 
-  li {
-    font-weight: bold;
-    color: #14A085;
-    font-size: 18px;
-  }
-  
-  
-  /* Page content */
-  .content {
-    padding: 16px;
-    text-align: center;
-  }
-  
-  /* The sticky class is added to the header with JS when it reaches its scroll position */
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%
-  }
-  
-  /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-  .sticky + .content {
-    padding-top: 102px;
-  }
+h3 {
+  color: #14A085;
+}
 
-  /* W3 - Image Gallery */
-  div.gallery img {
-    width: 100%;
-    height: auto;
-    padding: 5px;
-  }
-  
-  div.desc {
-    padding: 15px 4px;
-    text-align: left;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
+li {
+  font-weight: bold;
+  color: #14A085;
+  font-size: 18px;
+}
+
+
+/* Page content */
+.content {
+  padding: 16px;
+  text-align: center;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky+.content {
+  padding-top: 102px;
+}
+
+/* W3 - Image Gallery */
+div.gallery img {
+  width: 100%;
+  height: auto;
+  padding: 5px;
+}
+
+div.desc {
+  padding: 15px 4px;
+  text-align: left;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
   .responsive {
-    padding: 0 6px;
-    float: left;
-    width: 24.99999%;
+    width: 49.99999%;
+    margin: 6px 0;
   }
-  
-  @media only screen and (max-width: 700px) {
-    .responsive {
-      width: 49.99999%;
-      margin: 6px 0;
-    }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
   }
-  
-  @media only screen and (max-width: 500px) {
-    .responsive {
-      width: 100%;
-    }
-  }
-  
-  .clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/** Slider Toggle **/
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 16px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 11px;
+  width: 11px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #14A085;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #14A085;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/*Splash screen*/
+.centre {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Upload Screen*/
+.headLogo {
+  padding-top: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centreModal {
+  width: 50%;
+  margin: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centreUnsized {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centreCover {
+  position: fixed;
+  top: 15%;
+  left: 25%;
+}
+
+#uploading {
+  visibility: visible;
+  animation-name: "fadeOut";
+  animation-duration: 2s;
+  animation-delay: 3s;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1
   }
 
-  /** Slider Toggle **/
-
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 30px;
-    height: 16px;
-  }
-  
-  .switch input { 
+  100% {
     opacity: 0;
-    width: 0;
-    height: 0;
   }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 11px;
-    width: 11px;
-    left: 3px;
-    bottom: 3px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #14A085;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #14A085;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(13px);
-    -ms-transform: translateX(13px);
-    transform: translateX(13px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
+}
 
-  /*Splash screen*/
-  .centre {
-    width: 50%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
 
-  /*Upload Screen*/
-  .headLogo {
-    padding-top: 50px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
+/*Welcome Screen*/
+.carouselImg {
+  width: 50%;
+}
 
-  .centreModal {
-    width: 50%;
-    margin: 30px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
+/* To Settings*/
+#gear {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 50%;
+}
 
-  .centreUnsized {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
+#info {
+  position: fixed;
+  bottom: 20px;
+  right: 90px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 50%;
+}
 
-  .centreCover {
-    position: fixed;
-    top: 15%;
-    left: 25%;
-  }
+/* Welcome Screen */
+.btn {
+  position: absolute;
+  top: 50%;
+}
 
-  #uploading {
-    visibility: visible;
-    animation-name: "fadeOut";
-    animation-duration: 2s;
-    animation-delay: 3s;
-  }
-
-  @keyframes fadeOut {
-    0% {
-      opacity:1
-    }
-    100% {
-      opacity:0;
-    }
-  }
-  
-
-  /*Welcome Screen*/
-  .carouselImg {
-    width: 50%;
-  }
-
-  /* To Settings*/
-  #gear {
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background-color: white;
-    border-radius: 50%;
-  }
-
-  #info {
-    position: fixed;
-    bottom: 20px;
-    right: 90px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background-color: white;
-    border-radius: 50%;
-  }
-
-  /* Welcome Screen */
-  .btn {
-    position: absolute;
-    top: 50%;
-  }
-
-  /* #btnLeft {
+/* #btnLeft {
     padding-right:-100px;
   }
 

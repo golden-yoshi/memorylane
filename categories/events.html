@@ -18,11 +18,12 @@
                 <li><a href="categories.html"><span class="glyphicon glyphicon-chevron-left"></span>Back</a></li>
             </ul>
             <div class="navbar-header">
-                <p class="navbar-brand" style="position:absolute;top:50;left:37%;float:left;"><a href="../index.html"><img src="../assets/Logo.png" alt="MemoryLane"></a></p>
+                <p class="navbar-brand" style="position:absolute;top:50;left:37%;float:left;"><a
+                        href="../index.html"><img src="../assets/Logo.png" alt="MemoryLane"></a></p>
             </div>
             <ul class="nav navbar-nav">
-                    <li><a href="categories.html"><img src="../assets/Photos.png"> CATEGORIES</a></li>
-                    <li><a href="../upload.html"><img src="../assets/Add.png" alt=""> UPLOAD PHOTOS</a></li>
+                <li><a href="categories.html"><img src="../assets/Photos.png"> CATEGORIES</a></li>
+                <li><a href="../upload.html"><img src="../assets/Add.png" alt=""> UPLOAD PHOTOS</a></li>
             </ul>
         </div>
     </div>
@@ -51,44 +52,46 @@
                     <div class="desc"><button class="button" onclick="toJourneys()">Start Photo Lane</button></div>
                 </div>
             </div>
-    </div>
+        </div>
 
-    <!--  JS Functionality -->
-    <script>
-        window.onscroll = function () { myFunction() };
+        <!--  JS Functionality -->
+        <script>
+            window.onscroll = function () {
+                myFunction()
+            };
 
-        var header = document.getElementById("appNameHeader");
-        var sticky = header.offsetTop;
+            var header = document.getElementById("appNameHeader");
+            var sticky = header.offsetTop;
 
-        function myFunction() {
-            if (window.pageYOffset > sticky) {
-                header.classList.add("sticky");
-            } else {
-                header.classList.remove("sticky");
+            function myFunction() {
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                } else {
+                    header.classList.remove("sticky");
+                }
             }
-        }
 
-        function toJourneys() {
-            window.open("../journey/journey.html", "_self")
-        }
+            function toJourneys() {
+                window.open("../journey/journey.html", "_self")
+            }
 
-        // var slideIndex = 1;
-        // showDivs(slideIndex);
-        // function plusDivs(n) {
-        //     showDivs(slideIndex += n);
-        // }
+            // var slideIndex = 1;
+            // showDivs(slideIndex);
+            // function plusDivs(n) {
+            //     showDivs(slideIndex += n);
+            // }
 
-        // function showDivs(n) {
-        //     var i;
-        //     var x = document.getElementsByClassName("suggestedSlides");
-        //     if (n > x.length) { slideIndex = 1 }
-        //     if (n < 1) { slideIndex = x.length }
-        //     for (i = 0; i < x.length; i++) {
-        //         x[i].style.display = "none";
-        //     }
-        //     x[slideIndex - 1].style.display = "block";
-        // }
-    </script>
+            // function showDivs(n) {
+            //     var i;
+            //     var x = document.getElementsByClassName("suggestedSlides");
+            //     if (n > x.length) { slideIndex = 1 }
+            //     if (n < 1) { slideIndex = x.length }
+            //     for (i = 0; i < x.length; i++) {
+            //         x[i].style.display = "none";
+            //     }
+            //     x[slideIndex - 1].style.display = "block";
+            // }
+        </script>
 </body>
 
 </html>

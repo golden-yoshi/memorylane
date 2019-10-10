@@ -2,13 +2,13 @@
 <html>
 
 <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="categories.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-        <title>Memory Lane</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="categories.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>Memory Lane</title>
 </head>
 
 <body>
@@ -16,10 +16,11 @@
     <div class="header" id="appNameHeader">
         <div class="container-fluid">
             <ul class="nav navbar-nav navbar-left">
-                    <li><a href="../index.html"><span class="glyphicon glyphicon-chevron-left"></span>Back</a></li>
+                <li><a href="../index.html"><span class="glyphicon glyphicon-chevron-left"></span>Back</a></li>
             </ul>
             <div class="navbar-header">
-                <p class="navbar-brand" style="position:absolute;top:50;left:37%;float:left;"><a href="../index.html"><img src="../assets/Logo.png" alt="MemoryLane"></a></p>
+                <p class="navbar-brand" style="position:absolute;top:50;left:37%;float:left;"><a
+                        href="../index.html"><img src="../assets/Logo.png" alt="MemoryLane"></a></p>
             </div>
             <ul class="nav navbar-nav">
                 <li><a href="#"><img src="../assets/Photos.png"> CATEGORIES</a></li>
@@ -30,38 +31,43 @@
     <!--  Body - Journey Albums  -->
     <div class="body-content">
         <button class="button nav navbar-nav navbar-right" style="padding: 15px;" onclick="toggleShow()">Delete</button>
-        <button class="button nav navbar-nav navbar-right" style="padding: 15px;margin-right:5px" onclick="toggleShow()">Add</button>
-        <h2 >Categories</h2>
+        <button class="button nav navbar-nav navbar-right" style="padding: 15px;margin-right:5px"
+            onclick="toggleShow()">Add</button>
+        <h2>Categories</h2>
         <div class="w3-row">
             <div class="responsive">
                 <div class="gallery">
                     <div class="desc" style="font-weight:bold"> Time </div>
                     <img src="../pages/hay.PNG" width="600" height="400">
-                    <div class="desc"><button class="button" onclick="window.open('time.html', '_self')">View</button></div>
-                </div>
-                </div>
-                <div class="responsive">
-                    <div class="gallery">
-                        <div class="desc" style="font-weight:bold">By Place</div>
-                        <img src="../pages/roadtrip.PNG" width="600" height="400" style="padding-bottom: 15px;">
-                        <div class="desc"><button class="button" onclick="window.open('place.html', '_self')">View</button></div>
-                    </div>
-                </div>
-                <div class="responsive">
-                    <div class="gallery">
-                        <div class="desc" style="font-weight:bold">By People</div>
-                        <img src="../pages/family.PNG" width="600" height="400">
-                        <div class="desc"><button class="button" onclick="window.open('people.html', '_self')">View</button></div>
-                    </div>
-                </div>
-                <div class="responsive">
-                    <div class="gallery">
-                        <div class="desc" style="font-weight:bold">By Event</div>
-                        <img src="../pages/christmas.PNG" width="600" height="400">
-                        <div class="desc"><button class="button" onclick="window.open('events.html', '_self')">View</button></div>
+                    <div class="desc"><button class="button" onclick="window.open('time.html', '_self')">View</button>
                     </div>
                 </div>
             </div>
+            <div class="responsive">
+                <div class="gallery">
+                    <div class="desc" style="font-weight:bold">By Place</div>
+                    <img src="../pages/roadtrip.PNG" width="600" height="400" style="padding-bottom: 15px;">
+                    <div class="desc"><button class="button" onclick="window.open('place.html', '_self')">View</button>
+                    </div>
+                </div>
+            </div>
+            <div class="responsive">
+                <div class="gallery">
+                    <div class="desc" style="font-weight:bold">By People</div>
+                    <img src="../pages/family.PNG" width="600" height="400">
+                    <div class="desc"><button class="button" onclick="window.open('people.html', '_self')">View</button>
+                    </div>
+                </div>
+            </div>
+            <div class="responsive">
+                <div class="gallery">
+                    <div class="desc" style="font-weight:bold">By Event</div>
+                    <img src="../pages/christmas.PNG" width="600" height="400">
+                    <div class="desc"><button class="button" onclick="window.open('events.html', '_self')">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <h3>Your Categories</h3>
         <div class="w3-row">
@@ -71,21 +77,21 @@
                     <img src="../pages/flowers.jpg" width="600" height="400">
                     <div class="desc"><button class="button" onclick="toJourneys()">Start Photo Lane</button></div>
                 </div>
+            </div>
+            <div class="responsive">
+                <div class="gallery">
+                    <div class="desc" style="font-weight:bold">Grandkids </div>
+                    <img src="../pages/01.PNG" width="600" height="400" style="padding-bottom: 15px;">
+                    <div class="desc"><button class="button" onclick="toJourneys()">Start Photo Lane</button></div>
                 </div>
-                <div class="responsive">
-                    <div class="gallery">
-                        <div class="desc" style="font-weight:bold">Grandkids </div>
-                        <img src="../pages/01.PNG" width="600" height="400" style="padding-bottom: 15px;">
-                        <div class="desc"><button class="button" onclick="toJourneys()">Start Photo Lane</button></div>
-                    </div>
+            </div>
+            <div id="toggler" class="responsive" style="display: none;">
+                <div class="gallery">
+                    <div class="desc" style="font-weight:bold"> New Category </div>
+                    <img src="../pages/dog.PNG" width="600" height="400">
+                    <div class="desc"><button class="button" onclick="toJourneys()">Start Photo Lane</button></div>
                 </div>
-                <div id="toggler" class="responsive" style="display: none;">
-                    <div class="gallery">
-                        <div class="desc" style="font-weight:bold"> New Category </div>
-                        <img src="../pages/dog.PNG" width="600" height="400">
-                        <div class="desc"><button class="button" onclick="toJourneys()">Start Photo Lane</button></div>
-                    </div>
-                </div>
+            </div>
         </div>
 
         <h3>Favourites</h3>
@@ -96,24 +102,26 @@
                     <img src="../pages/birth.PNG" width="600" height="400">
                     <div class="desc"><button class="button" onclick="toJourneys()">View</button></div>
                 </div>
-                </div>
-                <div class="responsive">
-                    <div class="gallery">
-                        <div class="desc" style="font-weight:bold">Sunny Resort</div>
-                        <img src="../pages/swimming.PNG" width="600" height="400">
-                        <div class="desc"><button class="button" onclick="toJourneys()">View</button></div>
-                    </div>
+            </div>
+            <div class="responsive">
+                <div class="gallery">
+                    <div class="desc" style="font-weight:bold">Sunny Resort</div>
+                    <img src="../pages/swimming.PNG" width="600" height="400">
+                    <div class="desc"><button class="button" onclick="toJourneys()">View</button></div>
                 </div>
             </div>
+        </div>
     </div>
 
-     <!-- Action buttons -->
-     <a href="../settings.html"><img src="../assets/Settings.png" alt="?"id="gear"></a>
-     <a href="../settings.html"><img src="../assets/Help_Support.png" alt="i"id="info"></a>
+    <!-- Action buttons -->
+    <a href="../settings.html"><img src="../assets/Settings.png" alt="?" id="gear"></a>
+    <a href="../settings.html"><img src="../assets/Help_Support.png" alt="i" id="info"></a>
 
     <!--  JS Functionality -->
     <script>
-        window.onscroll = function () { stickyFunction() };
+        window.onscroll = function () {
+            stickyFunction()
+        };
 
         var header = document.getElementById("appNameHeader");
         var sticky = header.offsetTop;
@@ -140,4 +148,5 @@
         }
     </script>
 </body>
+
 </html>
