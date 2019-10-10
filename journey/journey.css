@@ -83,7 +83,8 @@ p {
   }
 
   #btnRight {
-    padding-left:60px;
+    padding-left:40px;
+    float: right;
   }
 
   .button {
