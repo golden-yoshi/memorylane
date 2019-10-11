@@ -14,8 +14,9 @@
   <title>Memory Lane</title>
 </head>
 
-<body style="background-color:#FCFFFE">
+<body >
   <!-- TODO: check this out for each section: https://www.w3schools.com/bootstrap/bootstrap_carousel.asp -->
+  <!-- style="background-color:#FCFFFE" -->
 
   <img id="logoheader" style="display: none;" class="headLogo" src="./assets/Logo.png" alt="Memory Lane">
 
@@ -26,14 +27,14 @@
   <div id="welcomeview" style="display: none;">
     <!-- welcome screen + logo on top, arrow right -->
     <img class="centreModal" src="./assets/Welcome1.PNG">
-    <img style="padding-left: 85%" src="./assets/ActiveRight.png" id="btnRight" class="btn"
+    <img style="margin-left: 85%" src="./assets/ActiveRight.png" id="btnRight" class="btn"
       onclick="clickWelcome(this.id)">
   </div>
   <div id="shareview" style="display: none;">
     <!-- share with fam screen + logo, arrow both -->
     <img class="centreModal" src="./assets/Welcome2.PNG">
-    <img style="width: 20px" src="./assets/ActiveLeft.png" id="btnLeft" class="btn" onclick="clickShare('btnLeft')">
-    <img style="padding-left: 85%;" src="./assets/ActiveRight.png" id="btnRight" class="btn"
+    <img style="margin-right: 85%" src="./assets/ActiveLeft.png" id="btnLeft" class="btn" onclick="clickShare(this.id)">
+    <img style="margin-left: 85%;" src="./assets/ActiveRight.png" id="btnRight" class="btn"
       onclick="clickShare('btnRight')">
   </div>
   <div id="countdownview" style="display:none;">
@@ -68,11 +69,11 @@
 
     function clickShare(id) {
       console.log("share clicked, id: " + id);
-      if (document.getElementById(id).style.paddingRight) {
+      if (document.getElementById(id).style.marginRight) {
         welcome.style.display = "block";
         share.style.display = "none";
       }
-      if (document.getElementById(id).style.paddingLeft) {
+      if (document.getElementById(id).style.marginLeft) {
         share.style.display = "none";
         countdown.style.display = "block";
         upload.style.display = "block";
